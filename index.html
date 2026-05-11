@@ -318,28 +318,119 @@
       margin: 12px 0 7px;
     }
 
-    #routine .routine-grid {
-      margin-top: 28px;
+    #routine {
+      background: linear-gradient(180deg, rgba(248, 252, 255, .88), rgba(237, 246, 255, .94));
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .routine-subtitle { max-width: 840px; margin-top: 12px; }
+    .routine-sticky-indicator {
+      display: none;
+      gap: 10px;
+      margin-top: 18px;
+      margin-bottom: 18px;
+      position: sticky;
+      top: 78px;
+      z-index: 30;
+      padding: 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.78);
+      backdrop-filter: blur(10px);
+      width: fit-content;
+    }
+    .routine-indicator-pill {
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      color: var(--text-soft);
+      border: 1px solid transparent;
+      background: transparent;
+      text-transform: uppercase;
+    }
+    .routine-indicator-pill.active {
+      color: var(--blue-4);
+      background: #fff;
+      border-color: var(--line);
+      box-shadow: 0 6px 16px rgba(16, 37, 56, .09);
+    }
+    .routine-layout {
+      margin-top: 26px;
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
+      gap: 18px;
+      align-items: start;
     }
-    .routine-card {
+    .routine-column {
       border: 1px solid var(--line);
-      border-radius: var(--radius-md);
-      background: rgba(255,255,255,.72);
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,.66);
+      backdrop-filter: blur(10px);
       box-shadow: var(--shadow-sm);
-      padding: 22px;
+      padding: clamp(20px, 2.6vw, 26px);
     }
-    .routine-label {
+    .routine-column-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .routine-period {
+      min-width: 48px;
+      height: 34px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       font-size: .76rem;
-      text-transform: uppercase;
-      letter-spacing: .15em;
-      color: var(--blue-4);
-      font-weight: 700;
-      margin-bottom: 10px;
+      letter-spacing: .12em;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(135deg, #2c83ca, #1f6cae);
     }
-    .routine-flow { font-weight: 600; color: var(--text); font-size: clamp(.94rem, 1.7vw, 1.05rem); }
+    .routine-column-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .routine-timeline { list-style: none; display: grid; gap: 12px; }
+    .routine-step {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255,255,255,.86);
+      padding: 14px 14px 14px 16px;
+      position: relative;
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+    .routine-step + .routine-step::before {
+      content: '↓';
+      position: absolute;
+      top: -18px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--blue-3);
+      font-weight: 700;
+      font-size: .95rem;
+    }
+    .routine-step-no {
+      font-size: 1.7rem;
+      font-weight: 800;
+      line-height: 1;
+      color: rgba(31,108,174,.28);
+      text-align: center;
+      letter-spacing: -.03em;
+    }
+    .routine-step-name {
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.35;
+    }
 
     #pricing {
       background: linear-gradient(160deg, #113654 0%, #1b507b 50%, #2c6da1 100%);
@@ -465,7 +556,12 @@
       .topbar-inner { min-height: 64px; }
       .hero-actions { flex-direction: column; align-items: stretch; }
       .hero-actions .cta-btn, .hero-actions .cta-btn-outline { width: 100%; }
-      .problem-grid, #features .feature-list, #routine .routine-grid, .input-row, .footer-grid { grid-template-columns: 1fr; }
+      .problem-grid, #features .feature-list, .input-row, .footer-grid { grid-template-columns: 1fr; }
+      .routine-sticky-indicator { display: inline-flex; top: 68px; }
+      .routine-layout { grid-template-columns: 1fr; gap: 14px; }
+      .routine-column { border-radius: 24px; padding: 20px; }
+      .routine-step { border-radius: 16px; padding: 14px; grid-template-columns: 48px 1fr; }
+      .routine-step-no { font-size: 1.45rem; }
       .product-slider { grid-auto-columns: minmax(235px, 86%); }
       .pricing-actions { flex-direction: column; }
       .pricing-actions .cta-btn, .pricing-actions .cta-btn-outline, #cta-final .cta-btn { width: 100%; }
@@ -629,16 +725,68 @@
 
   <section id="routine">
     <div class="container">
-      <div class="section-label reveal">Daily Clinical Routine</div>
-      <h2 class="reveal">Simple 5-Step Daily Routine</h2>
-      <div class="routine-grid">
-        <article class="routine-card reveal">
-          <div class="routine-label">Morning</div>
-          <div class="routine-flow">Cleanser → Serum → Aqua Gel → Spot Gel</div>
+      <div class="section-label reveal">Quy trình chăm sóc da hàng ngày</div>
+      <h2 class="reveal">Simple 5-Step Acne Control Routine</h2>
+      <p class="routine-subtitle reveal reveal-delay-1">Thiết kế tối giản – dễ sử dụng mỗi ngày cho da dầu mụn trong khí hậu nóng ẩm.</p>
+
+      <div class="routine-sticky-indicator reveal reveal-delay-1" id="routineStickyIndicator" aria-label="Routine period indicator">
+        <span class="routine-indicator-pill active" data-target-period="am">AM</span>
+        <span class="routine-indicator-pill" data-target-period="pm">PM</span>
+      </div>
+
+      <div class="routine-layout">
+        <article class="routine-column reveal" data-period="am" id="routineAm">
+          <div class="routine-column-head">
+            <span class="routine-period">AM</span>
+            <h3 class="routine-column-title">Morning Routine</h3>
+          </div>
+          <ol class="routine-timeline">
+            <li class="routine-step">
+              <span class="routine-step-no">01</span>
+              <span class="routine-step-name">Cleanser</span>
+            </li>
+            <li class="routine-step">
+              <span class="routine-step-no">02</span>
+              <span class="routine-step-name">Serum</span>
+            </li>
+            <li class="routine-step">
+              <span class="routine-step-no">03</span>
+              <span class="routine-step-name">Aqua Gel</span>
+            </li>
+            <li class="routine-step">
+              <span class="routine-step-no">04</span>
+              <span class="routine-step-name">Spot Gel</span>
+            </li>
+          </ol>
         </article>
-        <article class="routine-card reveal reveal-delay-1">
-          <div class="routine-label">Night</div>
-          <div class="routine-flow">Cleanser → Toner → Serum → Aqua Gel → Spot Gel</div>
+
+        <article class="routine-column reveal reveal-delay-1" data-period="pm" id="routinePm">
+          <div class="routine-column-head">
+            <span class="routine-period">PM</span>
+            <h3 class="routine-column-title">Night Routine</h3>
+          </div>
+          <ol class="routine-timeline">
+            <li class="routine-step">
+              <span class="routine-step-no">01</span>
+              <span class="routine-step-name">Cleanser</span>
+            </li>
+            <li class="routine-step">
+              <span class="routine-step-no">02</span>
+              <span class="routine-step-name">Toner</span>
+            </li>
+            <li class="routine-step">
+              <span class="routine-step-no">03</span>
+              <span class="routine-step-name">Serum</span>
+            </li>
+            <li class="routine-step">
+              <span class="routine-step-no">04</span>
+              <span class="routine-step-name">Aqua Gel</span>
+            </li>
+            <li class="routine-step">
+              <span class="routine-step-no">05</span>
+              <span class="routine-step-name">Spot Gel</span>
+            </li>
+          </ol>
         </article>
       </div>
     </div>
@@ -753,6 +901,24 @@
       });
     }, { threshold: 0.12 });
     revealEls.forEach(function(el) { observer.observe(el); });
+
+    var routineColumns = document.querySelectorAll('.routine-column[data-period]');
+    var routinePills = document.querySelectorAll('.routine-indicator-pill[data-target-period]');
+    function setRoutineActive(period) {
+      routinePills.forEach(function(pill) {
+        pill.classList.toggle('active', pill.getAttribute('data-target-period') === period);
+      });
+    }
+    if (routineColumns.length && routinePills.length) {
+      var routineObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            setRoutineActive(entry.target.getAttribute('data-period'));
+          }
+        });
+      }, { threshold: 0.55 });
+      routineColumns.forEach(function(col) { routineObserver.observe(col); });
+    }
 
     function handleSubmit(event) {
       event.preventDefault();
