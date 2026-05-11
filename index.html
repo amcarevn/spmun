@@ -29,6 +29,8 @@
       --radius-lg: 30px;
       --topbar-h: 72px;
       --topbar-h-mobile: 64px;
+      --sticky-offset-desktop: 6px;
+      --sticky-offset-mobile: 4px;
       --shadow-sm: 0 8px 24px rgba(16, 37, 56, .08);
       --shadow-md: 0 14px 36px rgba(16, 37, 56, .12);
       --shadow-lg: 0 24px 68px rgba(16, 37, 56, .18);
@@ -332,7 +334,7 @@
       margin-top: 18px;
       margin-bottom: 18px;
       position: sticky;
-      top: calc(var(--topbar-h) + 6px);
+      top: calc(var(--topbar-h) + var(--sticky-offset-desktop));
       z-index: 30;
       padding: 8px;
       border-radius: 999px;
@@ -559,7 +561,7 @@
       .hero-actions { flex-direction: column; align-items: stretch; }
       .hero-actions .cta-btn, .hero-actions .cta-btn-outline { width: 100%; }
       .problem-grid, #features .feature-list, .input-row, .footer-grid { grid-template-columns: 1fr; }
-      .routine-sticky-indicator { display: inline-flex; top: calc(var(--topbar-h-mobile) + 4px); }
+      .routine-sticky-indicator { display: inline-flex; top: calc(var(--topbar-h-mobile) + var(--sticky-offset-mobile)); }
       .routine-layout { grid-template-columns: 1fr; gap: 14px; }
       .routine-column { border-radius: 24px; padding: 20px; }
       .routine-step { border-radius: 16px; padding: 14px; grid-template-columns: 48px 1fr; }
@@ -912,6 +914,7 @@
       });
     }
     if (routineColumns.length && routinePills.length) {
+      // Higher threshold ensures the indicator switches only when most of a column is visible.
       var ROUTINE_ACTIVE_THRESHOLD = 0.55;
       var routineObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
