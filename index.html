@@ -149,6 +149,7 @@
       align-items: center;
     }
     .hero-sub { margin: 18px 0 26px; max-width: 620px; }
+    .hero-title-line { display: block; }
     .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
     .badge-row { display: flex; flex-wrap: wrap; gap: 10px; }
     .trust-badge {
@@ -484,7 +485,7 @@
     <div class="container hero-grid">
       <div class="reveal">
         <div class="section-label">Clinical Tropical Acne System</div>
-        <h1>ACNE-PURE™<br />5-Step Acne Control System For Tropical Climate</h1>
+        <h1>ACNE-PURE™<span class="hero-title-line">5-Step Acne Control System For Tropical Climate</span></h1>
         <p class="hero-sub">
           A complete oily-acne protocol powered by the “Triple-Lock Mechanism”: Deep Cleansing · Sebum Control · Barrier Recovery.
           Built to support breakouts, excess oil, and early post-acne dark marks while staying suitable for sensitive skin.
@@ -687,7 +688,7 @@
         <form class="register-form" id="registrationForm" onsubmit="handleSubmit(event)" novalidate>
           <div class="input-row">
             <input type="text" class="form-input" id="nameInput" placeholder="Full name" required aria-label="Full name" />
-            <input type="tel" class="form-input" id="phoneInput" placeholder="Phone number" required aria-label="Phone number" pattern="^[0-9+\-\s]{8,15}$" />
+            <input type="tel" class="form-input" id="phoneInput" placeholder="Phone number" required aria-label="Phone number" pattern="^\+?[1-9]\d{7,14}$" />
           </div>
           <input type="email" class="form-input" id="emailInput" placeholder="Email" required aria-label="Email address" />
           <select class="form-select" id="concernSelect" required aria-label="Main skin concern">
@@ -763,7 +764,7 @@
       var form = document.getElementById('registrationForm');
       var success = document.getElementById('successMsg');
       var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      var phoneOk = /^[0-9+\-\s]{8,15}$/.test(phone);
+      var phoneOk = /^\+?[1-9]\d{7,14}$/.test(phone);
       if (!name || !phoneOk || !emailOk || !concern) {
         err.style.display = 'block';
         return;
