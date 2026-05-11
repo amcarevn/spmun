@@ -29,6 +29,7 @@
       --radius-lg: 30px;
       --topbar-h: 72px;
       --topbar-h-mobile: 64px;
+      /* Gap between sticky routine indicator and topbar */
       --sticky-offset-desktop: 6px;
       --sticky-offset-mobile: 4px;
       --shadow-sm: 0 8px 24px rgba(16, 37, 56, .08);
@@ -916,14 +917,14 @@
     if (routineColumns.length && routinePills.length) {
       // Switch AM/PM indicator only after ~55% of a column is visible to avoid jitter
       // when users are between sections on short mobile viewports.
-      var ROUTINE_ACTIVE_THRESHOLD = 0.55;
+      var ROUTINE_COLUMN_ACTIVE_THRESHOLD = 0.55;
       var routineObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
             setRoutineActive(entry.target.getAttribute('data-period'));
           }
         });
-      }, { threshold: ROUTINE_ACTIVE_THRESHOLD });
+      }, { threshold: ROUTINE_COLUMN_ACTIVE_THRESHOLD });
       routineColumns.forEach(function(col) { routineObserver.observe(col); });
     }
 
