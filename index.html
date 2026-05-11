@@ -487,38 +487,205 @@
     }
 
     #pricing {
-      background: linear-gradient(160deg, #788a45 0%, #95a95a 50%, #b08b39 100%);
+      background: linear-gradient(150deg, #4b5d2e 0%, #667c45 38%, #7c9355 68%, #b08f4f 100%);
       color: #fff;
+      position: relative;
+      overflow: hidden;
     }
-    .pricing-grid {
+    #pricing::before {
+      content: '';
+      position: absolute;
+      top: -120px; right: -100px;
+      width: 520px; height: 520px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,.12) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    #pricing::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -60px;
+      width: 360px; height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,241,210,.12) 0%, transparent 68%);
+      pointer-events: none;
+    }
+    .pricing-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-      gap: 18px;
-      margin-top: 30px;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
     }
-    .price-card {
-      border-radius: var(--radius-md);
-      border: 1px solid rgba(255,255,255,.25);
-      background: rgba(255,255,255,.1);
-      backdrop-filter: blur(10px);
-      padding: 22px;
+    .pricing-label { color: rgba(175,195,110,.9); }
+    .pricing-headline { color: #fff; margin-top: 8px; }
+    .pricing-subtitle {
+      color: rgba(255,255,255,.58);
+      max-width: 440px;
+      margin-top: 12px;
+      font-size: .97rem;
+      line-height: 1.6;
     }
-    .price-card h3 { margin-bottom: 9px; }
-    .price-value { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; }
-    .price-note { color: rgba(255,255,255,.82); font-size: .88rem; margin-top: 6px; }
-    .save-pill {
+    .pricing-card-unified {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      backdrop-filter: blur(14px);
+      margin-top: 32px;
+      position: relative;
+    }
+    .pricing-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+    .pricing-card-title {
+      font-size: .74rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-weight: 700;
+      color: rgba(255,255,255,.42);
+    }
+    .pricing-best-value {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      background: #fff6de;
-      color: #876729;
+      gap: 6px;
+      background: linear-gradient(135deg, #afc36e, #d9a441);
+      color: #fff;
       border-radius: 999px;
-      padding: 8px 14px;
-      font-size: .86rem;
+      padding: 6px 14px;
+      font-size: .73rem;
       font-weight: 800;
-      margin-top: 8px;
+      letter-spacing: .04em;
     }
-    .pricing-actions { margin-top: 30px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .price-compare { display: flex; flex-direction: column; }
+    .price-compare-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+    }
+    .price-compare-row.separate { border-bottom: 1px solid rgba(255,255,255,.10); }
+    .price-compare-label-wrap { display: flex; flex-direction: column; gap: 6px; }
+    .price-compare-label {
+      font-size: .86rem;
+      color: rgba(255,255,255,.42);
+      font-weight: 500;
+    }
+    .price-compare-label.combo { color: rgba(255,255,255,.88); font-weight: 600; font-size: .94rem; }
+    .price-compare-value {
+      font-weight: 800;
+      font-size: 1.12rem;
+      color: rgba(255,255,255,.35);
+      text-decoration: line-through;
+      text-decoration-color: rgba(255,255,255,.25);
+    }
+    .price-compare-value.hero {
+      font-size: clamp(1.55rem, 3vw, 2.1rem);
+      color: #fff;
+      text-decoration: none;
+      line-height: 1;
+    }
+    .save-pill-new {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(217,164,65,.18);
+      color: #d9a441;
+      border: 1px solid rgba(217,164,65,.35);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: .72rem;
+      font-weight: 800;
+      width: fit-content;
+    }
+    .savings-callout {
+      margin-top: 18px;
+      background: rgba(175,195,110,.10);
+      border: 1px solid rgba(175,195,110,.22);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      font-size: .875rem;
+      color: rgba(175,195,110,.92);
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+    .pricing-trust-list {
+      list-style: none;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .pricing-trust-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .875rem;
+      color: rgba(255,255,255,.65);
+    }
+    .pricing-trust-list li i { color: #afc36e; flex-shrink: 0; font-size: .8rem; }
+    .pricing-actions { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .pricing-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .pricing-img-frame {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.28);
+      width: 100%;
+    }
+    .pricing-img-frame img { width: 100%; height: auto; display: block; }
+    .pricing-img-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(0deg, rgba(8,18,6,.88) 0%, transparent 62%);
+      padding: 28px 24px 22px;
+    }
+    .pricing-img-eyebrow {
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-weight: 700;
+      color: rgba(175,195,110,.85);
+    }
+    .pricing-img-caption {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      margin-top: 5px;
+    }
+    .pricing-steps-badge {
+      position: absolute;
+      top: 18px; right: 18px;
+      background: rgba(10,20,8,.55);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(175,195,110,.28);
+      border-radius: var(--radius-md);
+      padding: 12px 18px;
+      text-align: center;
+    }
+    .pricing-steps-badge .badge-num {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #fff;
+      display: block;
+      line-height: 1;
+    }
+    .pricing-steps-badge .badge-label {
+      font-size: .65rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: rgba(175,195,110,.8);
+      display: block;
+      margin-top: 5px;
+    }
 
     #cta-final {
       padding-top: 72px;
@@ -603,7 +770,8 @@
       .hero-visual-wrap { max-width: 520px; margin: 0 auto; }
       .product-slider { grid-auto-columns: minmax(248px, 45%); }
       #features .feature-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-layout { grid-template-columns: 1fr; }
+      .pricing-visual { order: -1; max-width: 500px; margin: 0 auto; width: 100%; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 720px) {
@@ -839,27 +1007,63 @@
 
   <section id="pricing">
     <div class="container">
-      <div class="section-label" style="color:#d8ecff;" data-i18n="pricingLabel">Conversion Focused Full Set Offer</div>
-      <h2 data-i18n="pricingTitle">Complete ACNE-PURE System</h2>
-      <p style="color:rgba(255,255,255,.82);max-width:760px;margin-top:12px;" data-i18n="pricingSubtitle">
-        Designed as one synchronized treatment protocol for oily acne-prone skin in hot and humid environments.
-      </p>
-      <div class="pricing-grid">
-        <article class="price-card reveal">
-          <h3 data-i18n="pricingSingleTitle">Single Purchase Total</h3>
-          <div class="price-value">2.600.000đ</div>
-          <p class="price-note" data-i18n="pricingSingleNote">Buy products separately</p>
-        </article>
-        <article class="price-card reveal reveal-delay-1">
-          <h3 data-i18n="pricingComboTitle">Combo Price</h3>
-          <div class="price-value">2.000.000đ</div>
-          <span class="save-pill"><i class="fa-solid fa-bolt"></i> <span data-i18n="pricingSaveText">Save 23%</span></span>
-          <p class="price-note" data-i18n="pricingComboNote">Get full treatment set and save more</p>
-        </article>
-      </div>
-      <div class="pricing-actions">
-        <a href="#register" class="cta-btn"><span data-i18n="pricingPrimaryCta">Get Full Treatment Set</span> <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="#product-gallery" class="cta-btn-outline" data-i18n="pricingSecondaryCta">Build Your Routine</a>
+      <div class="pricing-layout">
+        <!-- Left: Pricing Content -->
+        <div class="pricing-content reveal">
+          <div class="section-label pricing-label">Complete Treatment Protocol</div>
+          <h2 class="pricing-headline">Complete ACNE-PURE System</h2>
+          <p class="pricing-subtitle">Designed as one synchronized treatment protocol for oily acne-prone skin in hot and humid environments.</p>
+
+          <div class="pricing-card-unified">
+            <div class="pricing-card-top">
+              <span class="pricing-card-title">Pricing Comparison</span>
+              <span class="pricing-best-value"><i class="fa-solid fa-bolt"></i> Best Value</span>
+            </div>
+            <div class="price-compare">
+              <div class="price-compare-row separate">
+                <span class="price-compare-label">Buy products separately</span>
+                <span class="price-compare-value">2.600.000đ</span>
+              </div>
+              <div class="price-compare-row">
+                <div class="price-compare-label-wrap">
+                  <span class="price-compare-label combo">Full Set Combo</span>
+                  <span class="save-pill-new"><i class="fa-solid fa-bolt"></i> Save 23%</span>
+                </div>
+                <span class="price-compare-value hero">2.000.000đ</span>
+              </div>
+            </div>
+            <div class="savings-callout">
+              <i class="fa-solid fa-circle-check"></i>
+              You save <strong>600.000đ</strong> compared to buying separately
+            </div>
+            <ul class="pricing-trust-list">
+              <li><i class="fa-solid fa-check"></i> 5 synchronized treatment steps in one set</li>
+              <li><i class="fa-solid fa-check"></i> Formulated for tropical oily-acne skin</li>
+              <li><i class="fa-solid fa-check"></i> Free skincare consultation included</li>
+            </ul>
+          </div>
+
+          <div class="pricing-actions">
+            <a href="#register" class="cta-btn">Get Full Treatment Set <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#product-gallery" class="cta-btn-outline">Build Your Routine</a>
+          </div>
+        </div>
+
+        <!-- Right: Product Image -->
+        <div class="pricing-visual reveal reveal-delay-1">
+          <div class="pricing-img-frame">
+            <img src="./FULL (6).jpeg" alt="ACNE-PURE complete 5-step tropical acne treatment set" />
+            <div class="pricing-img-overlay">
+              <div class="pricing-img-eyebrow">ACNE-PURE™ Full System</div>
+              <div class="pricing-img-caption">5-Step Treatment Protocol</div>
+            </div>
+            <div class="pricing-steps-badge">
+              <span class="badge-num">5</span>
+              <span class="badge-label">Step System</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
