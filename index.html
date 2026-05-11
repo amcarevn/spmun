@@ -29,7 +29,7 @@
       --radius-lg: 30px;
       --topbar-h: 72px;
       --topbar-h-mobile: 60px;
-      --container-padding-mobile: 24px;
+      --container-gutter-mobile: 24px;
       /* Gap between sticky routine indicator and topbar */
       --sticky-offset-desktop: 6px;
       --sticky-offset-mobile: 4px;
@@ -781,14 +781,14 @@
       .footer-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 767px) {
-      .container { width: min(1180px, 100% - var(--container-padding-mobile)); }
+      .container { width: min(1180px, 100% - var(--container-gutter-mobile)); }
       .topbar-inner { min-height: 60px; }
       .hero-grid > *, .gallery-head > *, .routine-layout > *, .pricing-layout > *, .footer-grid > *,
       .input-row > *, .topbar-inner > *, .topbar-actions > *, .pricing-card-top > *, .price-compare-row > * { min-width: 0; }
       .brand { font-size: .9rem; letter-spacing: .12em; }
       .topbar-actions { flex-wrap: nowrap; gap: 8px; min-width: 0; flex: 1 1 auto; }
       .language-picker { padding: 6px 10px; min-width: 0; }
-      .language-picker select { font-size: .82rem; max-width: 68px; min-width: 0; }
+      .language-picker select { font-size: 0.82rem; max-width: 68px; min-width: 0; }
       .topbar-actions .cta-btn {
         padding: 10px 14px;
         font-size: 0.875rem;
