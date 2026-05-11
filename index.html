@@ -50,6 +50,8 @@
 
     img { max-width: 100%; height: auto; display: block; }
     .container { width: min(1180px, 100% - 32px); margin: 0 auto; }
+    .container > *, .hero-grid > *, .problem-grid > *, #features .feature-list > *, .routine-layout > *,
+    .pricing-layout > *, .footer-grid > *, .input-row > *, .gallery-head > *, .topbar-inner > * { min-width: 0; }
     section { padding: clamp(56px, 8vw, 96px) 0; }
     h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
     h1 { font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.05; letter-spacing: -.03em; }
@@ -780,11 +782,22 @@
       .footer-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 767px) {
+      .container { width: min(100% - 24px, 1180px); }
       .topbar-inner { min-height: 60px; }
-      .topbar-actions { flex-wrap: nowrap; gap: 8px; }
-      .language-picker { padding: 6px 10px; }
-      .language-picker select { font-size: .82rem; max-width: 68px; }
-      .topbar-actions .cta-btn { padding: 10px 14px; font-size: .82rem; min-height: 44px; }
+      .brand { font-size: .9rem; letter-spacing: .12em; }
+      .topbar-actions { flex-wrap: nowrap; gap: 8px; min-width: 0; flex: 1 1 auto; }
+      .language-picker { padding: 6px 10px; min-width: 0; }
+      .language-picker select { font-size: .82rem; max-width: 68px; min-width: 0; }
+      .topbar-actions .cta-btn {
+        padding: 10px 12px;
+        font-size: .78rem;
+        min-height: 44px;
+        min-width: 0;
+        text-align: center;
+        line-height: 1.2;
+      }
+      h1 { font-size: clamp(1.9rem, 8.5vw, 2.7rem); }
+      h2 { font-size: clamp(1.5rem, 7vw, 2.1rem); }
       #hero { min-height: 0; }
       .hero-actions { flex-direction: column; align-items: stretch; }
       .hero-actions .cta-btn, .hero-actions .cta-btn-outline { width: 100%; }
@@ -798,10 +811,18 @@
       .routine-step-no { font-size: 1.45rem; }
       .product-slider { grid-auto-columns: minmax(235px, 86%); }
       .pricing-card-unified { padding: 22px 18px; }
+      .pricing-card-top, .price-compare-row, .savings-callout { align-items: flex-start; }
+      .pricing-card-top, .price-compare-row { flex-direction: column; gap: 10px; }
+      .price-compare-value, .price-compare-value.hero { align-self: flex-start; }
+      .pricing-img-overlay { padding: 22px 18px 18px; }
+      .pricing-steps-badge { top: 14px; right: 14px; padding: 10px 14px; }
       .pricing-actions { flex-direction: column; }
       .pricing-actions .cta-btn, .pricing-actions .cta-btn-outline, #cta-final .cta-btn { width: 100%; }
       .register-box { border-radius: var(--radius-md); }
       .footer-bottom { flex-direction: column; }
+      .hero-sub, .slider-hint, .pricing-subtitle, .price-compare-label, .price-compare-label.combo,
+      .pricing-card-title, .pricing-trust-list li, .routine-column-title, .footer-bottom span,
+      .cta-btn, .cta-btn-outline, .trust-badge, h1, h2, h3, p { overflow-wrap: anywhere; }
     }
     @media (max-width: 360px) {
       .topbar-actions .cta-btn { padding: 10px; font-size: 0; gap: 0; }
