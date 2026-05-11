@@ -50,8 +50,8 @@
 
     img { max-width: 100%; height: auto; display: block; }
     .container { width: min(1180px, 100% - 32px); margin: 0 auto; }
-    .container > *, .hero-grid > *, .problem-grid > *, #features .feature-list > *, .routine-layout > *,
-    .pricing-layout > *, .footer-grid > *, .input-row > *, .gallery-head > *, .topbar-inner > * { min-width: 0; }
+    .hero-grid > *, .gallery-head > *, .routine-layout > *, .pricing-layout > *, .footer-grid > *,
+    .input-row > *, .topbar-inner > *, .topbar-actions > *, .pricing-card-top > *, .price-compare-row > * { min-width: 0; }
     section { padding: clamp(56px, 8vw, 96px) 0; }
     h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
     h1 { font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.05; letter-spacing: -.03em; }
@@ -820,9 +820,13 @@
       .pricing-actions .cta-btn, .pricing-actions .cta-btn-outline, #cta-final .cta-btn { width: 100%; }
       .register-box { border-radius: var(--radius-md); }
       .footer-bottom { flex-direction: column; }
-      .hero-sub, .slider-hint, .pricing-subtitle, .price-compare-label, .price-compare-label.combo,
+      .hero-title-line, .hero-sub, .slider-hint, .pricing-subtitle, .price-compare-label, .price-compare-label.combo,
       .pricing-card-title, .pricing-trust-list li, .routine-column-title, .footer-bottom span,
-      .cta-btn, .cta-btn-outline, .trust-badge, h1, h2, h3, p { overflow-wrap: anywhere; }
+      .topbar-actions .cta-btn, .pricing-actions .cta-btn, .pricing-actions .cta-btn-outline,
+      #cta-final .cta-btn, .trust-badge {
+        overflow-wrap: break-word;
+        word-break: normal;
+      }
     }
     @media (max-width: 360px) {
       .topbar-actions .cta-btn { padding: 10px; font-size: 0; gap: 0; }
