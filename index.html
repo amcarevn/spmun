@@ -1007,27 +1007,60 @@
 
   <section id="pricing">
     <div class="container">
-      <div class="section-label" style="color:#d8ecff;" data-i18n="pricingLabel">Conversion Focused Full Set Offer</div>
-      <h2 data-i18n="pricingTitle">Complete ACNE-PURE System</h2>
-      <p style="color:rgba(255,255,255,.82);max-width:760px;margin-top:12px;" data-i18n="pricingSubtitle">
-        Designed as one synchronized treatment protocol for oily acne-prone skin in hot and humid environments.
-      </p>
-      <div class="pricing-grid">
-        <article class="price-card reveal">
-          <h3 data-i18n="pricingSingleTitle">Single Purchase Total</h3>
-          <div class="price-value">$104</div>
-          <p class="price-note" data-i18n="pricingSingleNote">Buy products separately</p>
-        </article>
-        <article class="price-card reveal reveal-delay-1">
-          <h3 data-i18n="pricingComboTitle">Combo Price</h3>
-          <div class="price-value">$80</div>
-          <span class="save-pill"><i class="fa-solid fa-bolt"></i> <span data-i18n="pricingSaveText">Save 23%</span></span>
-          <p class="price-note" data-i18n="pricingComboNote">Get full treatment set and save more</p>
-        </article>
-      </div>
-      <div class="pricing-actions">
-        <a href="#register" class="cta-btn"><span data-i18n="pricingPrimaryCta">Get Full Treatment Set</span> <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="#product-gallery" class="cta-btn-outline" data-i18n="pricingSecondaryCta">Build Your Routine</a>
+      <div class="pricing-layout">
+        <div>
+          <div class="section-label pricing-label" data-i18n="pricingLabel">Complete Treatment Protocol</div>
+          <h2 class="pricing-headline" data-i18n="pricingTitle">Complete ACNE-PURE System</h2>
+          <p class="pricing-subtitle" data-i18n="pricingSubtitle">Designed as one synchronized treatment protocol for oily acne-prone skin in hot and humid environments.</p>
+          <div class="pricing-card-unified reveal">
+            <div class="pricing-card-top">
+              <span class="pricing-card-title" data-i18n="pricingCardLabel">Full Set vs. Individual</span>
+              <span class="pricing-best-value"><i class="fa-solid fa-bolt"></i> <span data-i18n="pricingSaveText">Save 23%</span></span>
+            </div>
+            <div class="price-compare">
+              <div class="price-compare-row separate">
+                <div class="price-compare-label-wrap">
+                  <span class="price-compare-label" data-i18n="pricingSingleTitle">Single Purchase Total</span>
+                  <span style="font-size:.78rem;color:rgba(255,255,255,.3);" data-i18n="pricingSingleNote">Buy products separately</span>
+                </div>
+                <span class="price-compare-value">$104</span>
+              </div>
+              <div class="price-compare-row">
+                <div class="price-compare-label-wrap">
+                  <span class="price-compare-label combo" data-i18n="pricingComboTitle">Combo Price</span>
+                  <span class="save-pill-new"><i class="fa-solid fa-bolt"></i> <span data-i18n="pricingSaveText">Save 23%</span></span>
+                </div>
+                <span class="price-compare-value hero">$80</span>
+              </div>
+            </div>
+            <div class="savings-callout">
+              <i class="fa-solid fa-circle-check"></i>
+              <span data-i18n="pricingComboNote">Get full treatment set and save more</span>
+            </div>
+          </div>
+          <ul class="pricing-trust-list">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="pricingTrust1">5-step synchronized protocol</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="pricingTrust2">Formulated for tropical climates</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="pricingTrust3">Oil control + barrier recovery</span></li>
+          </ul>
+          <div class="pricing-actions">
+            <a href="#register" class="cta-btn"><span data-i18n="pricingPrimaryCta">Get Full Treatment Set</span> <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="#product-gallery" class="cta-btn-outline" data-i18n="pricingSecondaryCta">Build Your Routine</a>
+          </div>
+        </div>
+        <div class="pricing-visual">
+          <div class="pricing-img-frame reveal">
+            <img src="./FULL (6).jpeg" alt="ACNE-PURE complete tropical acne treatment set" data-i18n-alt="heroImageAlt" />
+            <div class="pricing-img-overlay">
+              <div class="pricing-img-eyebrow" data-i18n="pricingImgEyebrow">Complete Treatment System</div>
+              <div class="pricing-img-caption" data-i18n="pricingImgCaption">ACNE-PURE™ 5-Step Protocol</div>
+            </div>
+            <div class="pricing-steps-badge">
+              <span class="badge-num">5</span>
+              <span class="badge-label" data-i18n="pricingStepLabel">Step System</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1166,9 +1199,10 @@
         routinePmStep3: 'Serum',
         routinePmStep4: 'Aqua Gel',
         routinePmStep5: 'Spot Gel',
-        pricingLabel: 'Conversion Focused Full Set Offer',
+        pricingLabel: 'Complete Treatment Protocol',
         pricingTitle: 'Complete ACNE-PURE System',
         pricingSubtitle: 'Designed as one synchronized treatment protocol for oily acne-prone skin in hot and humid environments.',
+        pricingCardLabel: 'Full Set vs. Individual',
         pricingSingleTitle: 'Single Purchase Total',
         pricingSingleNote: 'Buy products separately',
         pricingComboTitle: 'Combo Price',
@@ -1176,6 +1210,12 @@
         pricingComboNote: 'Get full treatment set and save more',
         pricingPrimaryCta: 'Get Full Treatment Set',
         pricingSecondaryCta: 'Build Your Routine',
+        pricingTrust1: '5-step synchronized protocol',
+        pricingTrust2: 'Formulated for tropical climates',
+        pricingTrust3: 'Oil control + barrier recovery',
+        pricingImgEyebrow: 'Complete Treatment System',
+        pricingImgCaption: 'ACNE-PURE™ 5-Step Protocol',
+        pricingStepLabel: 'Step System',
         finalTitle: 'Clearer Skin Starts With The Right System',
         finalText: 'A complete acne-care routine designed for oily skin in hot & humid climates.',
         finalCta: 'Start Your ACNE-PURE Routine',
@@ -1272,9 +1312,10 @@
         routinePmStep3: 'Serum',
         routinePmStep4: 'Aqua Gel',
         routinePmStep5: 'Spot Gel',
-        pricingLabel: 'Full Set Offer na Nakatuon sa Conversion',
+        pricingLabel: 'Kumpletong Treatment Protocol',
         pricingTitle: 'Kumpletong ACNE-PURE System',
         pricingSubtitle: 'Dinisenyo bilang iisang sabayang treatment protocol para sa mamantikang balat na may acne sa mainit at mahalumigmig na kapaligiran.',
+        pricingCardLabel: 'Full Set kumpara sa Indibidwal',
         pricingSingleTitle: 'Kabuuang Presyo ng Hiwalay na Bili',
         pricingSingleNote: 'Bilhin ang mga produkto nang paisa-isa',
         pricingComboTitle: 'Presyo ng Combo',
@@ -1282,6 +1323,12 @@
         pricingComboNote: 'Kunin ang buong treatment set at mas makatipid',
         pricingPrimaryCta: 'Kunin ang Buong Treatment Set',
         pricingSecondaryCta: 'Buuin ang Iyong Routine',
+        pricingTrust1: '5-hakbang na synchronized protocol',
+        pricingTrust2: 'Ginawa para sa tropikal na klima',
+        pricingTrust3: 'Oil control + barrier recovery',
+        pricingImgEyebrow: 'Kumpletong Sistema ng Paggamot',
+        pricingImgCaption: 'ACNE-PURE™ 5-Hakbang na Protocol',
+        pricingStepLabel: 'Hakbang na Sistema',
         finalTitle: 'Mas Malinaw na Balat ay Nagsisimula sa Tamang Sistema',
         finalText: 'Isang kumpletong acne-care routine na ginawa para sa mamantikang balat sa mainit at mahalumigmig na klima.',
         finalCta: 'Simulan ang Iyong ACNE-PURE Routine',
