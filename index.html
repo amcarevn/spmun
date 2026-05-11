@@ -1,0 +1,1913 @@
+<!DOCTYPE html>
+<html lang="fil">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bộ sản phẩm trị nám chuyên sâu 5 bước — ức chế melanin từ gốc, mờ nám, trả lại làn da sáng mịn tự nhiên. / Professional 5-step anti-pigmentation skincare set — inhibit melanin at the root, fade dark spots, restore naturally radiant skin." />
+  <meta name="keywords" content="trị nám, skincare, anti-pigmentation, làm trắng da, serum trị nám, kem trị nám, mỹ phẩm thiên nhiên" />
+  <title>ORIA — Ang Dark Spot Treatment Set | Advanced Pigmentation Control Set</title>
+  <link rel="icon" type="image/jpeg" href="./logoria.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f7f4e2;
+      color: #2a2010;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+    img, video { max-width: 100%; height: auto; }
+
+    /* ===== DESIGN TOKENS ===== */
+    :root {
+      --green-50:  #f7f4e2;
+      --green-100: #ede8be;
+      --green-200: #d4c478;
+      --green-300: #b0a040;
+      --green-400: #7a8c00;
+      --green-500: #4a6400;
+      --green-600: #324e01;
+      --cream:     #faf5e4;
+      --sand:      #ede4c4;
+      --text-dark: #2a2010;
+      --text-mid:  #5c5530;
+      --text-light:#8a8050;
+      --white:     #ffffff;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 32px;
+      --header-offset-mobile: 144px;
+      --shadow-sm: 0 2px 12px rgba(74,100,0,.12);
+      --shadow-md: 0 8px 32px rgba(74,100,0,.16);
+      --shadow-lg: 0 20px 60px rgba(74,100,0,.22);
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    h1,h2,h3,h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+    h1 { font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 300; }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 400; }
+    h3 { font-size: clamp(1.2rem, 2vw, 1.6rem); font-weight: 600; }
+    p  { font-size: clamp(.9rem, 1.5vw, 1rem); color: var(--text-mid); }
+
+    /* ===== LAYOUT ===== */
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 28px); }
+    .container > * { min-width: 0; }
+    section { padding: clamp(56px, 7vw, 88px) 0; }
+    .section-heading-center { text-align: center; }
+    .section-heading-spacious { margin-bottom: clamp(40px, 6vw, 60px); }
+
+    /* ===== LANGUAGE TOGGLE ===== */
+    #lang-bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: #e9edd8;
+      border-bottom: 1px solid var(--green-200);
+      padding: 12px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      line-height: 0;
+    }
+    .brand-logo img {
+      display: block;
+      width: clamp(92px, 11vw, 132px);
+      height: auto;
+      object-fit: contain;
+    }
+    .lang-toggle {
+      display: flex; gap: 4px; align-items: center;
+      background: var(--green-100); border-radius: 99px; padding: 4px;
+      max-width: 100%;
+    }
+    .lang-btn {
+      border: none; background: transparent;
+      padding: 6px 16px; border-radius: 99px;
+      font-family: 'Roboto', sans-serif; font-size: .85rem; font-weight: 500;
+      cursor: pointer; transition: all .25s; color: var(--text-mid);
+    }
+    .lang-btn.active {
+      background: var(--white); color: var(--green-500);
+      box-shadow: 0 1px 6px rgba(74,100,0,.18);
+    }
+    .lang-btn i,
+    [data-lang] > i { margin-right: 6px; }
+    .nav-cta {
+      background: var(--green-400); color: var(--white);
+      border: none; border-radius: 99px;
+      padding: 8px 22px; font-family: 'Roboto', sans-serif;
+      font-size: .85rem; font-weight: 500; cursor: pointer;
+      text-decoration: none; transition: background .25s;
+      max-width: 100%;
+      text-align: center;
+      white-space: normal;
+    }
+    .nav-cta:hover { background: var(--green-500); }
+
+    /* ===== HERO ===== */
+    #hero {
+      padding-top: clamp(104px, 14vw, 128px);
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(212,196,120,.38) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 80% at 20% 70%, rgba(237,228,196,.4) 0%, transparent 60%),
+        var(--cream);
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute; top: -80px; right: -80px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(176,160,64,.22) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    #hero .container { max-width: 1120px; padding-inline: clamp(18px, 2.6vw, 30px); }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+      gap: clamp(18px, 3vw, 34px);
+      align-items: center;
+    }
+    html[lang="fil"] .hero-grid { gap: 30px; }
+    .hero-content,
+    .hero-visual,
+    .problem-card,
+    .step-card,
+    .feature-item,
+    .ingredient-card,
+    .testimonial-card,
+    .footer-col,
+    .gallery-card,
+    .combo-image-wrap,
+    .combo-info { min-width: 0; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green-100); color: var(--green-500);
+      border-radius: 99px; padding: 6px 16px; font-size: .8rem; font-weight: 500;
+      letter-spacing: .08em; margin-bottom: 20px; max-width: 100%; flex-wrap: wrap;
+    }
+    .hero-badge::before {
+      font-family: "Font Awesome 6 Free"; font-weight: 900;
+      content: '\f06c'; font-size: .9rem;
+    }
+    .hero-content { max-width: 620px; }
+    .hero-title {
+      margin-bottom: clamp(16px, 1.8vw, 20px);
+      color: var(--text-dark);
+      font-size: clamp(2.6rem, 5.1vw, 4.4rem);
+    }
+    .hero-title em { font-style: italic; color: var(--green-500); }
+    .hero-sub { font-size: clamp(1.02rem, 1.95vw, 1.2rem); margin-bottom: clamp(22px, 3vw, 32px); }
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(135deg, var(--green-400), var(--green-500));
+      color: var(--white); border: none; border-radius: 99px;
+      padding: 16px 36px; font-size: 1rem; font-weight: 500;
+      cursor: pointer; text-decoration: none;
+      box-shadow: 0 6px 24px rgba(74,100,0,.35);
+      transition: transform .25s, box-shadow .25s;
+      max-width: 100%;
+      text-align: center;
+      white-space: normal;
+    }
+    .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(74,100,0,.4); }
+    .hero-cta-arrow { font-size: 1.1rem; transition: transform .25s; }
+    .hero-cta:hover .hero-cta-arrow { transform: translateX(4px); }
+    .hero-trust {
+      display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 8px;
+      font-size: .82rem; color: var(--text-light); white-space: normal;
+    }
+    .trust-sep { color: var(--text-light); font-size: .82rem; }
+    .hero-trust:focus { outline: none; }
+    .trust-item span { font-size: 1rem; }
+
+    /* Hero image / product mockup */
+    .hero-visual {
+      display: flex; justify-content: flex-end; align-items: center;
+      position: relative;
+    }
+    .product-image {
+      width: 100%;
+      max-width: min(100%, 520px);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ===== WAVE DIVIDER ===== */
+    .wave { display: block; width: 100%; overflow: hidden; line-height: 0; }
+    .wave svg { display: block; }
+
+    /* ===== STATS BAR ===== */
+    #stats {
+      background: linear-gradient(135deg, var(--green-400), var(--green-500));
+      padding: 40px 0; color: var(--white);
+    }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; text-align: center; }
+    .stat-value { font-family: 'Roboto', sans-serif; font-size: 2.4rem; font-weight: 600; line-height: 1; }
+    .stat-label { font-size: .82rem; opacity: .85; margin-top: 4px; }
+
+    /* ===== PROBLEM & SOLUTION ===== */
+    #problem { background: var(--cream); }
+    .section-label {
+      font-size: .78rem; font-weight: 600; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--green-400); margin-bottom: 12px;
+    }
+    .section-title { margin-bottom: 16px; color: var(--text-dark); }
+    .section-sub { max-width: 520px; margin: 0 auto 56px; text-align: center; }
+    .problem-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 28px; }
+    .problem-card {
+      background: var(--white); border-radius: var(--radius-md);
+      padding: 36px 28px; box-shadow: var(--shadow-sm);
+      border-top: 3px solid var(--green-200);
+      transition: box-shadow .3s, transform .3s;
+    }
+    .problem-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .pain-icon { font-size: 2.2rem; margin-bottom: 16px; display: block; }
+    .pain-title { font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 8px; font-family: 'Roboto', sans-serif; }
+    .pain-desc { font-size: .88rem; color: var(--text-mid); margin-bottom: 16px; }
+    .solution-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--green-100); color: var(--green-500);
+      border-radius: 99px; padding: 4px 12px; font-size: .78rem; font-weight: 500;
+      max-width: 100%;
+      flex-wrap: wrap;
+    }
+    .solution-tag::before { font-family: "Font Awesome 6 Free"; font-weight: 900; content: '\f00c'; }
+
+    /* ===== PRODUCTS ===== */
+    #products { background: var(--green-50); }
+    .products-header { text-align: center; margin-bottom: 56px; }
+    .steps-grid { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 24px; }
+    .step-card {
+      background: var(--white); border-radius: var(--radius-md);
+      padding: 32px 24px; box-shadow: var(--shadow-sm);
+      text-align: center; position: relative; overflow: hidden;
+      transition: box-shadow .3s, transform .3s;
+    }
+    .step-card::before {
+      content: attr(data-step);
+      position: absolute; top: -10px; right: 16px;
+      font-family: 'Roboto', sans-serif; font-size: 5rem;
+      font-weight: 700; color: var(--green-100); line-height: 1;
+    }
+    .step-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .step-icon { font-size: 2.8rem; margin-bottom: 16px; }
+    .step-number { font-size: .72rem; font-weight: 700; letter-spacing: .15em; color: var(--green-400); text-transform: uppercase; margin-bottom: 8px; }
+    .step-name { font-family: 'Roboto', sans-serif; font-size: 1.25rem; font-weight: 600; color: var(--text-dark); margin-bottom: 12px; }
+    .step-benefits { list-style: none; text-align: left; }
+    .step-benefits li { font-size: .82rem; color: var(--text-mid); padding: 4px 0; display: flex; gap: 8px; align-items: flex-start; }
+    .step-benefits li::before { font-family: "Font Awesome 6 Free"; font-weight: 900; content: '\f06c'; font-size: .7rem; margin-top: 3px; flex-shrink: 0; }
+
+    /* ===== FEATURES ===== */
+    #features { background: var(--cream); }
+    .features-grid { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 40px; align-items: center; }
+    .features-list { display: grid; gap: 20px; }
+    .feature-item {
+      display: flex; gap: 20px; align-items: flex-start;
+      background: var(--white); border-radius: var(--radius-md);
+      padding: 24px; box-shadow: var(--shadow-sm);
+      transition: box-shadow .3s;
+    }
+    .feature-item:hover { box-shadow: var(--shadow-md); }
+    .feature-icon-wrap {
+      width: 52px; height: 52px; flex-shrink: 0;
+      background: var(--green-100); border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+    }
+    .feature-text h3 { font-size: 1.05rem; margin-bottom: 6px; color: var(--text-dark); }
+    .feature-text p { font-size: .85rem; }
+    .features-visual {
+      background: linear-gradient(145deg, var(--green-100), var(--green-50));
+      border-radius: var(--radius-lg); padding: 48px 36px;
+      box-shadow: var(--shadow-md); text-align: center;
+    }
+    .big-stat { font-family: 'Roboto', sans-serif; font-size: 5rem; font-weight: 300; color: var(--green-400); line-height: 1; }
+    .big-stat-label { font-size: 1rem; color: var(--text-mid); margin-top: 4px; margin-bottom: 28px; }
+    .ingredient-badges { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 24px; }
+    .badge {
+      background: var(--white); color: var(--green-600);
+      border-radius: 99px; padding: 6px 14px; font-size: .75rem; font-weight: 500;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* ===== INGREDIENTS SCIENCE ===== */
+    #ingredients { background: var(--green-50); }
+    .ingredients-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }
+    .ingredient-card {
+      background: var(--white); border-radius: var(--radius-md);
+      padding: 24px; box-shadow: var(--shadow-sm);
+    }
+    .ingredient-name { font-family: 'Roboto', sans-serif; font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin-bottom: 4px; }
+    .ingredient-science { font-size: .78rem; color: var(--green-400); font-weight: 500; margin-bottom: 8px; }
+    .ingredient-desc { font-size: .83rem; }
+
+    /* ===== TESTIMONIALS ===== */
+    #testimonials { background: var(--cream); }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px; }
+    .testimonial-card {
+      background: var(--white); border-radius: var(--radius-md);
+      padding: 36px; box-shadow: var(--shadow-sm);
+      position: relative; border-bottom: 3px solid var(--green-200);
+    }
+    .quote-mark {
+      font-family: 'Roboto', sans-serif; font-size: 5rem;
+      color: var(--green-200); line-height: .8; margin-bottom: 8px;
+    }
+    .testimonial-text { font-size: .95rem; color: var(--text-mid); font-style: italic; margin-bottom: 24px; line-height: 1.8; }
+    .reviewer { display: flex; align-items: center; gap: 14px; }
+    .reviewer-avatar {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--green-200), var(--green-300));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+    }
+    .reviewer-name { font-weight: 600; font-size: .92rem; color: var(--text-dark); }
+    .reviewer-detail { font-size: .78rem; color: var(--text-light); }
+    .stars { color: #889110; font-size: .9rem; margin-bottom: 4px; }
+    .verified { font-size: .72rem; color: var(--green-400); font-weight: 500; }
+
+    /* ===== PRICING / CTA ===== */
+    #pricing { background: linear-gradient(135deg, var(--green-500), var(--green-600)); color: var(--white); }
+    .pricing-content { text-align: center; max-width: 680px; margin: 0 auto; }
+    .pricing-content h2 { color: var(--white); margin-bottom: 16px; }
+    .pricing-content p { color: rgba(255,255,255,.85); margin-bottom: 40px; }
+    .price-box {
+      background: rgba(255,255,255,.12); border-radius: var(--radius-lg);
+      padding: 40px; margin-bottom: 32px; border: 1px solid rgba(255,255,255,.2);
+      backdrop-filter: blur(8px);
+    }
+    .price-label { font-size: .8rem; letter-spacing: .15em; text-transform: uppercase; opacity: .8; margin-bottom: 8px; }
+    .price-main { font-family: 'Roboto', sans-serif; font-size: 3.6rem; font-weight: 300; line-height: 1; margin-bottom: 4px; }
+    .price-orig { font-size: 1rem; opacity: .6; text-decoration: line-through; margin-bottom: 12px; }
+    .price-save { background: #f0b429; color: #1a1a1a; border-radius: 99px; padding: 4px 14px; font-size: .82rem; font-weight: 600; display: inline-block; margin-bottom: 20px; }
+    .includes-list { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 16px; }
+    .includes-list li {
+      background: rgba(255,255,255,.15); border-radius: 99px;
+      padding: 5px 14px; font-size: .8rem;
+    }
+    .cta-btn-lg {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--white); color: var(--green-500);
+      border: none; border-radius: 99px; padding: 18px 48px;
+      font-size: 1.05rem; font-weight: 600; cursor: pointer; text-decoration: none;
+      box-shadow: 0 8px 32px rgba(0,0,0,.2); transition: transform .25s, box-shadow .25s;
+      font-family: 'Roboto', sans-serif;
+      max-width: 100%;
+      text-align: center;
+      white-space: normal;
+    }
+    .cta-btn-lg:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,.28); }
+    .guarantee { font-size: .82rem; opacity: .75; margin-top: 16px; }
+
+    /* ===== EMAIL CAPTURE ===== */
+    #register {
+      background: var(--white); padding: 80px 0;
+    }
+    .register-box {
+      max-width: 600px; margin: 0 auto; text-align: center;
+    }
+    .register-box h2 { margin-bottom: 12px; color: var(--text-dark); }
+    .register-box p { margin-bottom: 36px; }
+    .register-form { display: flex; flex-direction: column; gap: 14px; }
+    .input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-input {
+      width: 100%; padding: 14px 20px; border-radius: 99px;
+      border: 1.5px solid var(--green-200); background: var(--green-50);
+      font-family: 'Roboto', sans-serif; font-size: .92rem; color: var(--text-dark);
+      outline: none; transition: border-color .25s;
+    }
+    .form-input:focus { border-color: var(--green-400); }
+    .form-input::placeholder { color: var(--text-light); }
+    .form-select {
+      width: 100%; padding: 14px 20px; border-radius: 99px;
+      border: 1.5px solid var(--green-200); background: var(--green-50);
+      font-family: 'Roboto', sans-serif; font-size: .92rem; color: var(--text-dark);
+      outline: none; cursor: pointer; transition: border-color .25s;
+      appearance: none;
+    }
+    .form-select:focus { border-color: var(--green-400); }
+    .submit-btn {
+      background: linear-gradient(135deg, var(--green-400), var(--green-500));
+      color: var(--white); border: none; border-radius: 99px;
+      padding: 16px 36px; font-size: 1rem; font-weight: 600;
+      cursor: pointer; font-family: 'Roboto', sans-serif;
+      box-shadow: 0 6px 24px rgba(74,100,0,.35);
+      transition: transform .25s, box-shadow .25s;
+      max-width: 100%;
+      text-align: center;
+    }
+    .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(74,100,0,.4); }
+    .form-note { font-size: .78rem; color: var(--text-light); margin-top: 8px; }
+    .success-msg {
+      display: none; background: var(--green-100); color: var(--green-600);
+      border-radius: var(--radius-md); padding: 20px;
+      font-weight: 500; margin-top: 16px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #e9edd8; color: var(--text-dark);
+      padding: 48px 0 32px;
+    }
+    .footer-grid { display: grid; grid-template-columns: minmax(0, 2fr) repeat(2, minmax(0, 1fr)); gap: 40px; margin-bottom: 40px; }
+    .footer-brand { margin-bottom: 12px; }
+    .footer-brand img {
+      display: block;
+      width: clamp(110px, 14vw, 170px);
+      height: auto;
+      object-fit: contain;
+    }
+    .footer-tagline { font-size: .85rem; line-height: 1.7; color: var(--text-mid); }
+    .footer-col h4 { color: var(--text-dark); font-size: .85rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { color: var(--text-mid); text-decoration: none; font-size: .85rem; transition: color .2s; }
+    .footer-links a:hover { color: var(--green-500); }
+    .footer-divider { border: none; border-top: 1px solid rgba(42,32,16,.2); margin-bottom: 20px; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: .78rem; flex-wrap: wrap; gap: 8px; color: var(--text-mid); }
+
+    /* ===== PRODUCT GALLERY ===== */
+    #product-gallery {
+      background: var(--cream);
+      padding: 64px 0 48px;
+    }
+    .gallery-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .gallery-heading .section-label { text-align: center; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+    .gallery-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      text-align: center;
+      transition: box-shadow .3s, transform .3s;
+    }
+    .gallery-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .gallery-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-img-center { object-position: center; }
+    .gallery-card-body {
+      padding: 14px 12px 18px;
+    }
+    .gallery-card-name {
+      font-family: 'Roboto', sans-serif;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      overflow-wrap: break-word;
+    }
+    .gallery-card-price {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--green-500);
+    }
+    .gallery-card-price-orig {
+      font-size: .8rem;
+      color: var(--text-light);
+      text-decoration: line-through;
+      margin-left: 6px;
+    }
+
+    /* ===== COMBO HIGHLIGHT ===== */
+    .combo-highlight {
+      background: linear-gradient(135deg, var(--green-100), var(--sand));
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 48px;
+      align-items: center;
+      box-shadow: var(--shadow-md);
+      border: 2px solid var(--green-200);
+      position: relative;
+      overflow: hidden;
+    }
+    .combo-highlight::before {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle, rgba(176,160,64,.25) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .combo-badge {
+      position: absolute;
+      top: 16px; left: 16px;
+      background: linear-gradient(135deg, #f0b429, #e09000);
+      color: #1a1a1a;
+      font-family: 'Roboto', sans-serif;
+      font-size: .78rem;
+      font-weight: 700;
+      border-radius: 99px;
+      padding: 5px 14px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .combo-image-wrap {
+      width: 100%;
+      max-width: 520px;
+      justify-self: center;
+    }
+    .combo-image-wrap img {
+      width: 100%;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      display: block;
+    }
+    .combo-info {
+      width: 100%;
+      max-width: 520px;
+      justify-self: center;
+    }
+    .combo-info h3 {
+      font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+      color: var(--text-dark);
+      margin-bottom: 10px;
+    }
+    .combo-info p {
+      font-size: .9rem;
+      color: var(--text-mid);
+      margin-bottom: 20px;
+      max-width: none;
+    }
+    .combo-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .combo-price-main {
+      font-family: 'Roboto', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--green-500);
+      line-height: 1;
+    }
+    .combo-price-orig {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      text-decoration: line-through;
+    }
+    .combo-save-tag {
+      background: #f0b429;
+      color: #1a1a1a;
+      border-radius: 99px;
+      padding: 3px 12px;
+      font-size: .78rem;
+      font-weight: 700;
+    }
+    .combo-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--green-400), var(--green-500));
+      color: var(--white);
+      border: none;
+      border-radius: 99px;
+      padding: 14px 32px;
+      font-size: .95rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      font-family: 'Roboto', sans-serif;
+      box-shadow: 0 6px 24px rgba(74,100,0,.35);
+      transition: transform .25s, box-shadow .25s;
+      max-width: 100%;
+      text-align: center;
+      white-space: normal;
+    }
+    .combo-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(74,100,0,.4); }
+    .order-popup-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .2s ease;
+    }
+    .order-popup-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .order-popup {
+      width: min(100%, 480px);
+      background: var(--white);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      padding: clamp(20px, 4vw, 28px);
+      position: relative;
+    }
+    .order-popup-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      border: none;
+      background: transparent;
+      font-size: 1.4rem;
+      color: var(--text-mid);
+      cursor: pointer;
+      line-height: 1;
+    }
+    .order-popup-title {
+      text-align: center;
+      margin-bottom: 20px;
+      color: var(--green-500);
+      font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+    }
+    .order-popup-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .order-popup-input {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1.5px solid var(--green-200);
+      border-radius: 999px;
+      background: var(--green-50);
+      font-family: 'Roboto', sans-serif;
+      font-size: .95rem;
+      outline: none;
+      transition: border-color .2s ease;
+    }
+    .order-popup-input:focus { border-color: var(--green-400); }
+    .order-popup-submit {
+      width: 100%;
+      padding: 14px 20px;
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--green-400), var(--green-500));
+      color: var(--white);
+      font-family: 'Roboto', sans-serif;
+      font-weight: 600;
+      font-size: .95rem;
+      cursor: pointer;
+      transition: filter .2s ease;
+    }
+    .order-popup-submit:hover { filter: brightness(1.05); }
+    .order-popup-error {
+      font-size: .85rem;
+      color: #c0392b;
+      display: none;
+      text-align: center;
+      margin-top: 2px;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .hero-image-frame {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+    .timeline-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .timeline-title {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+    .timeline-list { display: flex; flex-direction: column; gap: 10px; }
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .82rem;
+    }
+    .timeline-pill {
+      border-radius: 99px;
+      padding: 2px 10px;
+      font-weight: 600;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .timeline-pill--light { background: var(--green-200); color: var(--green-600); }
+    .timeline-pill--mid { background: var(--green-300); color: var(--white); }
+    .timeline-pill--dark { background: var(--green-400); color: var(--white); }
+    .timeline-copy { color: var(--text-mid); }
+
+    @media (max-width: 1100px) {
+      #hero .container { max-width: 1020px; }
+      .hero-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: clamp(16px, 2.7vw, 26px); }
+      .gallery-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    }
+    @media (max-width: 900px) {
+      .gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    /* ===== LANGUAGE SWITCH ===== */
+    [data-lang="en"] { display: none; }
+    body.lang-en [data-lang="fil"] { display: none; }
+    body.lang-en [data-lang="en"] { display: revert; }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .3s; }
+    .reveal-delay-4 { transition-delay: .4s; }
+
+    /* ===== HERO PRICE OVERLAY ===== */
+    .hero-price-overlay {
+      position: absolute;
+      bottom: 20px; right: 20px;
+      background: linear-gradient(135deg, var(--green-400), var(--green-500));
+      color: #fff;
+      border-radius: var(--radius-md);
+      padding: 14px 20px;
+      text-align: center;
+      box-shadow: 0 8px 28px rgba(74,100,0,.45);
+      min-width: 140px;
+    }
+    .hero-price-overlay-label {
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      opacity: .85;
+      margin-bottom: 4px;
+    }
+    .hero-price-overlay-main {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .hero-price-overlay-orig {
+      font-size: .78rem;
+      text-decoration: line-through;
+      opacity: .65;
+      margin-top: 2px;
+    }
+    .hero-price-overlay-save {
+      margin-top: 6px;
+      background: #f0b429;
+      color: #1a1a1a;
+      border-radius: 99px;
+      padding: 2px 10px;
+      font-size: .72rem;
+      font-weight: 700;
+      display: inline-block;
+    }
+
+    /* ===== ICONS ===== */
+    i { color: #889110; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      #lang-bar { padding: 10px 14px; gap: 10px; flex-wrap: wrap; justify-content: center; }
+      .lang-toggle { order: 2; }
+      .nav-cta { order: 3; width: 100%; text-align: center; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-content { text-align: center; max-width: 680px; margin-inline: auto; }
+      #hero .container { max-width: 760px; }
+      .hero-sub { margin-inline: auto; }
+      .hero-visual { display: flex; margin-top: 24px; justify-content: center; }
+      .product-image { max-width: min(100%, 430px); }
+      .stats-grid { grid-template-columns: repeat(2,1fr); }
+      .problem-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: repeat(2,1fr); }
+      .features-grid { grid-template-columns: 1fr; }
+      .ingredients-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .input-row { grid-template-columns: 1fr; }
+      .combo-highlight { grid-template-columns: 1fr; gap: 28px; padding: clamp(24px, 5vw, 28px) clamp(16px, 4vw, 22px); }
+      .combo-image-wrap { max-width: 360px; }
+      .price-box,
+      .testimonial-card,
+      .features-visual { padding-left: clamp(20px, 5vw, 32px); padding-right: clamp(20px, 5vw, 32px); }
+    }
+    @media (max-width: 600px) {
+      #lang-bar { padding: 8px 10px; gap: 8px; }
+      .lang-toggle { width: 100%; }
+      .lang-btn { flex: 1; text-align: center; padding: 8px 10px; }
+      .nav-cta { width: 100%; padding: 10px 16px; }
+      #hero { padding-top: var(--header-offset-mobile); min-height: max(300px, calc(100vh - var(--header-offset-mobile))); min-height: max(300px, calc(100svh - var(--header-offset-mobile))); }
+      .hero-cta { width: 100%; justify-content: center; padding: 14px 20px; }
+      .hero-trust { margin-top: 24px; justify-content: center; }
+      .trust-sep { opacity: 0; width: 0; margin: 0; overflow: hidden; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2,1fr); }
+      .ingredients-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .combo-image-wrap { max-width: 300px; }
+      .combo-price-main,
+      .price-main,
+      .big-stat { font-size: clamp(2rem, 12vw, 3rem); }
+      .timeline-item { align-items: flex-start; flex-direction: column; }
+      .timeline-pill { white-space: normal; flex-shrink: 1; }
+      .price-box,
+      .testimonial-card,
+      .problem-card,
+      .step-card,
+      .feature-item,
+      .ingredient-card,
+      .features-visual,
+      .register-box { padding-left: clamp(18px, 5vw, 24px); padding-right: clamp(18px, 5vw, 24px); }
+      #register { padding: 64px 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================
+     NAVBAR / LANG TOGGLE
+============================= -->
+<nav id="lang-bar">
+  <a class="brand-logo" href="#">
+    <img src="./Untitled-1.png" alt="ORIA" />
+  </a>
+  <div class="lang-toggle" role="group" aria-label="Language selector">
+    <button class="lang-btn active" id="btn-fil" onclick="setLang('fil')" aria-pressed="true"><i class="fas fa-globe"></i> Filipino</button>
+    <button class="lang-btn" id="btn-en" onclick="setLang('en')" aria-pressed="false"><i class="fas fa-globe"></i> English</button>
+  </div>
+  <a href="#register" class="nav-cta">
+    <span data-lang="fil">Mag-order Na</span>
+    <span data-lang="en">Order Now</span>
+  </a>
+</nav>
+
+<!-- ============================
+     HERO
+============================= -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span data-lang="fil">5-Hakbang na Malalim na Sistema para sa Dark Spot — Medical Grade</span>
+          <span data-lang="en">5-Step Medical-Grade Pigmentation Control System</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span data-lang="fil">Pure Care,<br><em>Honest Skin</em></span>
+          <span data-lang="en">Pure Care,<br><em>Honest Skin</em></span>
+        </h1>
+
+        <p class="hero-sub">
+          <span data-lang="fil">Eksklusibong 5-hakbang na sistema — pinipigilan ang melanin mula sa ugat, sinisira ang mga kasalukuyang pigment cluster, at pinipigilan ang pagbabalik ng dark spots. Makikita ang resulta pagkatapos ng 4 na linggo.</span>
+          <span data-lang="en">A proprietary 5-step regimen that blocks melanin at the source, breaks down existing pigment clusters, and prevents recurrence. Visible results in 4 weeks.</span>
+        </p>
+
+        <a href="#register" class="hero-cta">
+          <span data-lang="fil">Kunin ang Set Mo Ngayon</span>
+          <span data-lang="en">Get Your Set Now</span>
+          <span class="hero-cta-arrow">→</span>
+        </a>
+
+        <div class="hero-trust" role="region" aria-label="Product certifications">
+          <div class="trust-item"><span><i class="fas fa-microscope"></i></span>
+            <span data-lang="fil">Nasubok sa Klinikal</span>
+            <span data-lang="en">Clinically Tested</span>
+          </div><span class="trust-sep" aria-hidden="true">|</span>
+          <div class="trust-item"><span><i class="fas fa-sparkles"></i></span>
+            <span data-lang="fil">Walang Paraben · Walang Alkohol</span>
+            <span data-lang="en">Paraben-free · Alcohol-free</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Image Visual -->
+      <div class="hero-visual">
+        <div class="hero-image-frame">
+          <img src="./img/full-nam-3.jpeg" alt="ORIA 5-step advanced dark spot set" class="product-image" style="border: 3px solid var(--green-200);" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     PRODUCT GALLERY
+============================= -->
+<section id="product-gallery">
+  <div class="container">
+    <div class="gallery-heading reveal">
+      <div class="section-label">
+        <span data-lang="fil">Mga Produkto</span>
+        <span data-lang="en">Our Products</span>
+      </div>
+      <h2 class="section-title">
+        <span data-lang="fil">Set ng mga Produkto ng ORIA</span>
+        <span data-lang="en">ORIA Melasma Treatment Collection</span>
+      </h2>
+    </div>
+
+    <!-- 5 individual products -->
+    <div class="gallery-grid">
+      <div class="gallery-card reveal">
+        <img src="./img/sua-rua-mat.jpeg" alt="Sữa rửa mặt SPOT-FADE Cleanser" loading="lazy" />
+        <div class="gallery-card-body">
+          <div class="gallery-card-name">Sữa rửa mặt – SPOT-FADE Cleanser</div>
+          <div class="gallery-card-price">$11.00</div>
+        </div>
+      </div>
+      <div class="gallery-card reveal reveal-delay-1">
+        <img src="./img/tinh-chat.jpeg" alt="Siêu tinh chất SPOT-FADE Serum" loading="lazy" />
+        <div class="gallery-card-body">
+          <div class="gallery-card-name">Siêu tinh chất – SPOT-FADE Serum</div>
+          <div class="gallery-card-price">$20.00</div>
+        </div>
+      </div>
+      <div class="gallery-card reveal reveal-delay-2">
+        <img src="./img/kem-phuc-hoi.jpeg" alt="Kem phục hồi da SPOT-FADE" loading="lazy" class="gallery-img-center" />
+        <div class="gallery-card-body">
+          <div class="gallery-card-name">Kem phục hồi da – SPOT-FADE</div>
+          <div class="gallery-card-price">$15.60</div>
+        </div>
+      </div>
+      <div class="gallery-card reveal reveal-delay-3">
+        <img src="./img/nuoc-than.jpeg" alt="Nước thần SPOT-FADE Essence" loading="lazy" class="gallery-img-center" />
+        <div class="gallery-card-body">
+          <div class="gallery-card-name">Nước thần – SPOT-FADE Essence</div>
+          <div class="gallery-card-price">$13.40</div>
+        </div>
+      </div>
+      <div class="gallery-card reveal reveal-delay-4">
+        <img src="./img/kem-chong-nang.jpeg" alt="Kem chống nắng SPOT-FADE Sunscreen" loading="lazy" class="gallery-img-center" />
+        <div class="gallery-card-body">
+          <div class="gallery-card-name">Kem chống nắng – SPOT-FADE Sunscreen</div>
+          <div class="gallery-card-price">$11.00</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Combo highlight -->
+    <div class="combo-highlight reveal">
+      <div class="combo-image-wrap">
+        <img src="./img/full-nam-3.jpeg" alt="ORIA complete product set" />
+      </div>
+      <div class="combo-info">
+        <h3>
+          <span data-lang="fil">Kumpletong 5 Produkto ng ORIA</span>
+          <span data-lang="en">Complete 5-Product ORIA Melasma Treatment Set</span>
+        </h3>
+        <p>
+          <span data-lang="fil">Kumpleto na 5 produkto para sa pinaka-epektibong paggamot ng dark spot — mula sa paglilinis hanggang proteksyon. Kasama ang lahat ng kailangan mo para sa isang buong skincare routine.</span>
+          <span data-lang="en">A complete 5-step system designed to target melasma, dark spots, and uneven pigmentation — from deep cleansing to daily UV protection for clinically inspired full-spectrum care.</span>
+        </p>
+        <div class="combo-price-row">
+          <span class="combo-price-main">$51.60</span>
+          <span class="combo-price-orig">$71.20</span>
+          <span class="combo-save-tag">Save ~$19.60 (~28% OFF)</span>
+        </div>
+        <a href="#register" class="combo-cta">
+          <span>Đặt hàng bộ sản phẩm kết hợp</span>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="order-popup-overlay" id="comboOrderPopup" aria-hidden="true">
+  <div class="order-popup" role="dialog" aria-modal="true" aria-labelledby="orderPopupTitle">
+    <button type="button" class="order-popup-close" id="closeOrderPopup" aria-label="Đóng popup">&times;</button>
+    <h3 class="order-popup-title" id="orderPopupTitle">ƯU ĐÃI ĐỘC QUYỀN</h3>
+    <form class="order-popup-form" id="comboOrderForm">
+      <label class="sr-only" for="popupFullName">Họ và tên đầy đủ</label>
+      <input class="order-popup-input" id="popupFullName" name="fullName" type="text" placeholder="Họ và tên đầy đủ" required />
+      <label class="sr-only" for="popupPhone">Điện thoại</label>
+      <input class="order-popup-input" id="popupPhone" name="phone" type="tel" placeholder="Điện thoại" required />
+      <label class="sr-only" for="popupEmail">Email của bạn</label>
+      <input class="order-popup-input" id="popupEmail" name="email" type="email" placeholder="Email của bạn" required />
+      <button type="submit" class="order-popup-submit">Đăng ký nhận ưu đãi</button>
+      <p id="popupOrderError" class="order-popup-error" role="alert" aria-live="assertive">Vui lòng điền đầy đủ thông tin.</p>
+    </form>
+  </div>
+</div>
+
+<!-- Stats Bar -->
+<div id="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="reveal">
+        <div class="stat-value">94%</div>
+        <div class="stat-label" data-lang="fil">Ang mga customer ay nakakita ng mas maliwanag na balat sa loob ng 4 na linggo</div>
+        <div class="stat-label" data-lang="en">Customers saw brighter skin in 4 weeks</div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="stat-value">4×</div>
+        <div class="stat-label" data-lang="fil">Mas Malakas kaysa Hydroquinone (Hexylresorcinol)</div>
+        <div class="stat-label" data-lang="en">Stronger than Hydroquinone (Hexylresorcinol)</div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="stat-value">8h</div>
+        <div class="stat-label" data-lang="fil">Napapanatiling Aktibong Sangkap para sa Dark Spot</div>
+        <div class="stat-label" data-lang="en">Sustained active ingredient performance</div>
+      </div>
+      <div class="reveal reveal-delay-3">
+        <div class="stat-value">20+</div>
+        <div class="stat-label" data-lang="fil">Internasyonal na Antas ng mga Aktibong Sangkap</div>
+        <div class="stat-label" data-lang="en">International-grade active ingredients</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================
+     5-STEP PRODUCT SYSTEM
+============================= -->
+<section id="products">
+  <div class="container">
+    <div class="products-header reveal">
+      <div class="section-label">
+          <span data-lang="fil">Ang 5-Hakbang na Sistema</span>
+          <span data-lang="en">The 5-Step System</span>
+      </div>
+      <h2 class="section-title">
+        <span data-lang="fil">Siyentipikong Proseso — Bawat Hakbang ay May Layunin</span>
+        <span data-lang="en">Science-Backed Routine — Every Step Has a Purpose</span>
+      </h2>
+    </div>
+
+    <div class="steps-grid">
+      <!-- Step 1 -->
+      <div class="step-card reveal" data-step="01">
+        <div class="step-icon"><i class="fas fa-pump-soap"></i></div>
+        <div class="step-number">Step 01 · Morning & Night</div>
+        <div class="step-name">
+          <span data-lang="fil">Panlinis ng Mukha</span>
+          <span data-lang="en">Purifying Cleanser</span>
+        </div>
+        <ul class="step-benefits">
+          <li>
+            <span data-lang="fil">Malalim na paglilinis nang hindi sinisira ang natural na moisture</span>
+            <span data-lang="en">Deep cleanse without stripping natural moisture</span>
+          </li>
+          <li>
+            <span data-lang="fil">Marahang PHA exfoliation — nagpapahina ng surface pigment</span>
+            <span data-lang="en">Gentle PHA exfoliation — fades surface pigment</span>
+          </li>
+          <li>
+            <span data-lang="fil">Binabala ang pH 5.5 para ihanda ang balat para sa mga susunod na hakbang</span>
+            <span data-lang="en">Balances pH 5.5 to prime skin for next steps</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Step 2 -->
+      <div class="step-card reveal reveal-delay-1" data-step="02">
+        <div class="step-icon"><i class="fas fa-droplet"></i></div>
+        <div class="step-number">Step 02 · After Cleansing</div>
+        <div class="step-name">
+          <span data-lang="fil">Pampagana (Essence)</span>
+          <span data-lang="en">Activating Essence</span>
+        </div>
+        <ul class="step-benefits">
+          <li>
+            <span data-lang="fil">Binubuksan ang mga pathway para sa pinakamataas na absorption ng Hakbang 03</span>
+            <span data-lang="en">Opens pathways for maximum Step 03 absorption</span>
+          </li>
+          <li>
+            <span data-lang="fil">Multi-layer hydration — agad na plump ang balat</span>
+            <span data-lang="en">Multi-layer hydration — instantly plump skin</span>
+          </li>
+          <li>
+            <span data-lang="fil">Galactomyces + Bifida Ferment: nagliliwanag at nagtatayo muli ng DNA</span>
+            <span data-lang="en">Galactomyces + Bifida Ferment: brighten & repair DNA</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Step 3 -->
+      <div class="step-card reveal reveal-delay-2" data-step="03">
+        <div class="step-icon"><i class="fas fa-prescription-bottle"></i></div>
+        <div class="step-number">Step 03 · Core Treatment</div>
+        <div class="step-name">
+          <span data-lang="fil">Super Essence (Serum)</span>
+          <span data-lang="en">Brightening Serum</span>
+        </div>
+        <ul class="step-benefits">
+          <li>
+            <span data-lang="fil">Pinipigilan ang Tyrosinase — pinipigilan ang paglikha ng bagong pigment</span>
+            <span data-lang="en">Inhibits Tyrosinase — stops new pigment production</span>
+          </li>
+          <li>
+            <span data-lang="fil">Sinisira ang mga kasalukuyang Melanin cluster, halatang nagpapahina ng dark spots</span>
+            <span data-lang="en">Fragments existing melanin clusters, visibly fades spots</span>
+          </li>
+          <li>
+            <span data-lang="fil">Hexylresorcinol + Alpha Arbutin + Liposomal Vitamin C</span>
+            <span data-lang="en">Hexylresorcinol + Alpha Arbutin + Liposomal Vit C</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Step 4 -->
+      <div class="step-card reveal reveal-delay-3" data-step="04">
+        <div class="step-icon"><i class="fas fa-moon"></i></div>
+        <div class="step-number">Step 04 · Final Lock</div>
+        <div class="step-name">
+          <span data-lang="fil">Krema sa Pagbabago</span>
+          <span data-lang="en">Recovery Cream</span>
+        </div>
+        <ul class="step-benefits">
+          <li>
+            <span data-lang="fil">Nagla-lock ng mga nutrients — aktibong sangkap ng Hakbang 03 ay nananatili sa loob ng 8 oras</span>
+            <span data-lang="en">Locks actives — Step 03 stays active for 8 hours</span>
+          </li>
+          <li>
+            <span data-lang="fil">Itinatayo muli ang skin barrier, pinapawian ng pangangati</span>
+            <span data-lang="en">Rebuilds skin barrier, soothes irritation</span>
+          </li>
+          <li>
+            <span data-lang="fil">Ceramide Complex + Copper Tripeptide + Bakuchiol</span>
+            <span data-lang="en">Ceramide Complex + Copper Tripeptide + Bakuchiol</span>
+          </li>
+        </ul>
+      </div>
+      <!-- Step 5 -->
+      <div class="step-card reveal reveal-delay-4" data-step="05">
+        <div class="step-icon"><i class="fas fa-sun"></i></div>
+        <div class="step-number">
+          <span data-lang="fil">Hakbang 05 · Pang-umaga · Kinakailangang Proteksyon</span>
+          <span data-lang="en">Step 05 · Daytime · Mandatory Protection</span>
+        </div>
+        <div class="step-name">
+          <span data-lang="fil">Malawak na proteksiyong sunscreen</span>
+          <span data-lang="en">Broad-spectrum sunscreen protection</span>
+        </div>
+        <ul class="step-benefits">
+          <li>
+            <span data-lang="fil">Pinoprotektahan ang balat laban sa UVA/UVB — pinipigilan ang muling pagbalik ng pigmentation</span>
+            <span data-lang="en">Protects skin from UVA/UVB — helps prevent pigment recurrence</span>
+          </li>
+          <li>
+            <span data-lang="fil">Bumubuo ng antioxidant shield, binabawasan ang epekto ng blue light at polusyon sa kapaligiran</span>
+            <span data-lang="en">Creates an antioxidant shield against blue light and environmental pollution</span>
+          </li>
+          <li>
+            <span data-lang="fil">Magaan na tekstura, nagla-lock ng moisture nang hindi bumabara sa balat</span>
+            <span data-lang="en">Lightweight texture that locks in moisture without clogging skin</span>
+          </li>
+          <li>
+            <span data-lang="fil">Bagong henerasyon ng UV filters + Niacinamide + antioxidant na Vitamin E</span>
+            <span data-lang="en">Next-gen UV filters + Niacinamide + antioxidant Vitamin E</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     FEATURES
+============================= -->
+<section id="features">
+  <div class="container">
+    <div class="features-grid">
+      <div>
+        <div class="section-label">
+          <span data-lang="fil">Mga Natatanging Tampok</span>
+          <span data-lang="en">Key Benefits</span>
+        </div>
+        <h2 class="section-title" style="margin-bottom:36px">
+          <span data-lang="fil">Hindi Lamang Nagpapahina ng Dark Spots — Ganap na Binabago ang Balat</span>
+          <span data-lang="en">Not Just Fading Spots — A Complete Skin Transformation</span>
+        </h2>
+        <div class="features-list">
+          <div class="feature-item reveal">
+            <div class="feature-icon-wrap"><i class="fas fa-dna"></i></div>
+            <div class="feature-text">
+              <h3>
+                <span data-lang="fil">Pinipigilan ang Melanin mula sa Ugat</span>
+                <span data-lang="en">Melanin Inhibition at the Root</span>
+              </h3>
+              <p>
+                <span data-lang="fil">Ang Tranexamic Acid (5%) + Hexylresorcinol ay ganap na pinipigilan ang Tyrosinase enzyme, pinipigilan ang bagong pigment na mabuo bago pa man ito lumabas.</span>
+                <span data-lang="en">The Tranexamic Acid (5%) + Hexylresorcinol duo completely inhibits Tyrosinase, preventing new pigment before it appears.</span>
+              </p>
+            </div>
+          </div>
+          <div class="feature-item reveal reveal-delay-1">
+            <div class="feature-icon-wrap"><i class="fas fa-burst"></i></div>
+            <div class="feature-text">
+              <h3>
+                <span data-lang="fil">Sinisira ang Kasalukuyang Pigment</span>
+                <span data-lang="en">Breaking Down Existing Pigment</span>
+              </h3>
+              <p>
+                <span data-lang="fil">Ang Glutathione + Liposomal Vitamin C ay sinisira ang matigas na melanin cluster, halatang nagpapahina ng dark spots, freckles at brown spots mula sa ika-2 linggo.</span>
+                <span data-lang="en">Glutathione + Liposomal Vitamin C break down stubborn melanin clusters, visibly fading spots from week 2.</span>
+              </p>
+            </div>
+          </div>
+          <div class="feature-item reveal reveal-delay-2">
+            <div class="feature-icon-wrap"><i class="fas fa-shield-halved"></i></div>
+            <div class="feature-text">
+              <h3>
+                <span data-lang="fil">Itinatayo Muli ang Skin Barrier</span>
+                <span data-lang="en">Barrier Reconstruction</span>
+              </h3>
+              <p>
+                <span data-lang="fil">Ang Ceramide Complex (1,3,6-II) + Madecassoside ay nagtatayo muli ng skin barrier, pinipigilan ang trans-epidermal na pagkawala ng tubig (TEWL) at tumutulong sa balat na mas mahusay na tiisin ang mga aktibong sangkap.</span>
+                <span data-lang="en">Ceramide Complex (1,3,6-II) + Madecassoside rebuild the protective barrier, prevent moisture loss and boost active tolerance.</span>
+              </p>
+            </div>
+          </div>
+          <div class="feature-item reveal reveal-delay-3">
+            <div class="feature-icon-wrap"><i class="fas fa-arrows-rotate"></i></div>
+            <div class="feature-text">
+              <h3>
+                <span data-lang="fil">Pinipigilan ang Pangmatagalang Pagbabalik ng Dark Spots</span>
+                <span data-lang="en">Long-Lasting Anti-Recurrence</span>
+              </h3>
+              <p>
+                <span data-lang="fil">Ang Bakuchiol 1% + Probiotics ay nagpapanatag ng aktibidad ng pigment cell at nagbabalanse ng microbiome ng balat, tumutulong upang hindi bumalik ang dark spots kahit pagkatapos ng sun exposure.</span>
+                <span data-lang="en">Bakuchiol 1% + Probiotics stabilize melanocyte activity and balance the skin microbiome, keeping spots away even after sun exposure.</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-visual reveal">
+        <div class="big-stat">
+          <span data-lang="fil">4 Linggo</span>
+          <span data-lang="en">4 Weeks</span>
+        </div>
+        <div class="big-stat-label">
+          <span data-lang="fil">Garantisadong makikita ang resulta</span>
+          <span data-lang="en">Visible results guaranteed</span>
+        </div>
+        <div class="timeline-card">
+          <div class="timeline-title">
+            <span data-lang="fil">Timeline ng Pagpapabuti</span>
+            <span data-lang="en">Improvement Timeline</span>
+          </div>
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <span class="timeline-pill timeline-pill--light">
+                <span data-lang="fil">Linggo 1-2</span>
+                <span data-lang="en">Week 1-2</span>
+              </span>
+              <span class="timeline-copy">
+                <span data-lang="fil">Mas maliwanag na balat, pinaliit ang pores</span>
+                <span data-lang="en">Brighter complexion, pores tightened</span>
+              </span>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-pill timeline-pill--mid">
+                <span data-lang="fil">Linggo 3-4</span>
+                <span data-lang="en">Week 3-4</span>
+              </span>
+              <span class="timeline-copy">
+                <span data-lang="fil">Halatang nagpapahina ng dark spots, mas pantay na skin tone</span>
+                <span data-lang="en">Spots visibly faded, even skin tone</span>
+              </span>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-pill timeline-pill--dark">
+                <span data-lang="fil">Linggo 6-8</span>
+                <span data-lang="en">Week 6-8</span>
+              </span>
+              <span class="timeline-copy">
+                <span data-lang="fil">Pantay na maliwanag na balat, halos nawala na ang dark spots</span>
+                <span data-lang="en">Radiant, near-spotless complexion</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="ingredient-badges">
+          <span class="badge">Tranexamic Acid 5%</span>
+          <span class="badge">Hexylresorcinol</span>
+          <span class="badge">Alpha Arbutin 2%</span>
+          <span class="badge">Glutathione</span>
+          <span class="badge">Ceramide 1,3,6-II</span>
+          <span class="badge">Bakuchiol 1%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     KEY INGREDIENTS
+============================= -->
+<section id="ingredients">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px" class="reveal">
+      <div class="section-label">
+        <span data-lang="fil">Mga Natatanging Sangkap</span>
+        <span data-lang="en">Star Ingredients</span>
+      </div>
+      <h2 class="section-title">
+        <span data-lang="fil">Pinatunayan ng Agham</span>
+        <span data-lang="en">Proven By Science</span>
+      </h2>
+    </div>
+    <div class="ingredients-grid">
+      <div class="ingredient-card reveal">
+        <div class="ingredient-name">Hexylresorcinol</div>
+        <div class="ingredient-science">
+          <span data-lang="fil">4× Mas Malakas kaysa Hydroquinone</span>
+          <span data-lang="en">4× Stronger than Hydroquinone</span>
+        </div>
+        <p class="ingredient-desc">
+          <span data-lang="fil">Ang bagong henerasyon na aktibong sangkap ay nagliliwanag ng balat nang mas epektibo, ganap na ligtas para sa sensitibong balat.</span>
+          <span data-lang="en">Next-gen brightening active delivering superior results, completely safe for sensitive skin.</span>
+        </p>
+      </div>
+      <div class="ingredient-card reveal reveal-delay-1">
+        <div class="ingredient-name">Tranexamic Acid 5%</div>
+        <div class="ingredient-science">
+          <span data-lang="fil">Medikal na Antas ng Konsentrasyon</span>
+          <span data-lang="en">Medical-Grade Concentration</span>
+        </div>
+        <p class="ingredient-desc">
+          <span data-lang="fil">Pinipigilan ang pigment sa iba't ibang pathway, habang pinabababa ang pamumula ng balat mula sa dilation ng capillary.</span>
+          <span data-lang="en">Inhibits pigment via multiple pathways while also reducing redness from broken capillaries.</span>
+        </p>
+      </div>
+      <div class="ingredient-card reveal reveal-delay-2">
+        <div class="ingredient-name">Liposomal Vitamin C</div>
+        <div class="ingredient-science">
+          <span data-lang="fil">Teknolohiya ng Liposome Encapsulation</span>
+          <span data-lang="en">Liposome Encapsulation Tech</span>
+        </div>
+        <p class="ingredient-desc">
+          <span data-lang="fil">Ang Vitamin C ay hindi na-oxidize, tumagos nang malalim sa dermis, at doble ang bisa ng pagliliwanag.</span>
+          <span data-lang="en">Vitamin C stays stable, penetrates to the dermis and doubles brightening efficacy.</span>
+        </p>
+      </div>
+      <div class="ingredient-card reveal">
+        <div class="ingredient-name">Galactomyces Ferment</div>
+        <div class="ingredient-science">
+          <span data-lang="fil">Katulad ng SK-II Pitera™</span>
+          <span data-lang="en">Similar to SK-II Pitera™</span>
+        </div>
+        <p class="ingredient-desc">
+          <span data-lang="fil">Ang banal na ferment ay nagliliwanag ng balat, nagpapaliit ng pores at nagbibigay ng kompletong anti-aging.</span>
+          <span data-lang="en">Legendary ferment brightens, minimizes pores and provides comprehensive anti-aging.</span>
+        </p>
+      </div>
+      <div class="ingredient-card reveal reveal-delay-1">
+        <div class="ingredient-name">Ceramide Complex 1,3,6-II</div>
+        <div class="ingredient-science">
+          <span data-lang="fil">Pagpapanumbalik ng Skin Barrier</span>
+          <span data-lang="en">Skin Barrier Restoration</span>
+        </div>
+        <p class="ingredient-desc">
+          <span data-lang="fil">Ang tatlong mahahalagang lipid ay nagtatahi ng skin cells, epektibong pinipigilan ang trans-epidermal na pagkawala ng tubig (TEWL).</span>
+          <span data-lang="en">Essential lipid trio bonds skin cells together, preventing transepidermal water loss (TEWL).</span>
+        </p>
+      </div>
+      <div class="ingredient-card reveal reveal-delay-2">
+        <div class="ingredient-name">Bakuchiol 1%</div>
+        <div class="ingredient-science">
+          <span data-lang="fil">Plant-Based Retinol</span>
+          <span data-lang="en">Plant-Based Retinol Alternative</span>
+        </div>
+        <p class="ingredient-desc">
+          <span data-lang="fil">Pinabibilis ang pagbabago ng selula, nagpapalabas ng dark spots, nang hindi nagiging sanhi ng pagbalat o sensitivity sa liwanag tulad ng Retinol.</span>
+          <span data-lang="en">Accelerates cell renewal and fades spots without the peeling or photosensitivity of Retinol.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     TESTIMONIALS
+============================= -->
+<section id="testimonials">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:52px" class="reveal">
+      <div class="section-label">
+        <span data-lang="fil">Ano ang Sinasabi ng mga Customer</span>
+        <span data-lang="en">What Our Customers Say</span>
+      </div>
+      <h2 class="section-title">
+        <span data-lang="fil">Mga Tunay na Resulta — Mula sa mga Babaeng Tulad Mo</span>
+        <span data-lang="en">Real Results — From Women Just Like You</span>
+      </h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="quote-mark">"</div>
+        <p class="testimonial-text">
+          <span data-lang="fil">Nasubukan ko na ang iba't ibang krema para sa dark spot sa loob ng 3 taon ngunit ang mga ito ay naglalabo lang at pagkatapos ay bumabalik nang mas maitim. Pagkatapos ng 6 na linggo gamit ang ORIA set, ang aking dark spots ay naging 70% mas maliwanag at hindi bumalik kahit sa maraming sun exposure. Ang texture ng balat ko ay naging mas makinis, ang pores ay lumaliit at ang skin tone ay mas pantay kaysa dati.</span>
+          <span data-lang="en">I'd used every pigmentation cream imaginable for 3 years — spots would fade then come back darker. After 6 weeks with ORIA, my spots have faded 70% and haven't returned despite sun exposure. Skin texture is smoother than ever, pores are smaller and my tone has never been this even.</span>
+        </p>
+        <div class="reviewer">
+          <div class="reviewer-avatar"><i class="fas fa-user"></i></div>
+          <div>
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <div class="reviewer-name">
+              <span data-lang="fil">Maria Santos</span>
+              <span data-lang="en">Emily Carter</span>
+            </div>
+            <div class="reviewer-detail">
+              <span data-lang="fil">34 taong gulang · Manila · Ginamit ng 8 linggo</span>
+              <span data-lang="en">Age 34 · New York, USA · Used for 8 weeks</span>
+            </div>
+            <div class="verified">
+              <i class="fas fa-check"></i> <span data-lang="fil">Verified na Pagbili</span>
+              <span data-lang="en">Verified Purchase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="quote-mark">"</div>
+        <p class="testimonial-text">
+          <span data-lang="fil">Ang aking balat ay napaka-sensitive at madalas na naiiritate ng mga malakas na aktibong sangkap. Ngunit sa ORIA, ang aking balat ay hindi man lang naging pula o nagbalat. Mula sa ika-2 linggo ang balat ay halatang mas maliwanag na. Ito ang unang produkto para sa dark spot na nagamit ko nang tuloy-tuloy nang hindi natakot sa pangangati. Talagang kahanga-hanga!</span>
+          <span data-lang="en">My skin is extremely sensitive — strong actives always cause irritation. With ORIA, absolutely no redness or peeling. By week 2 my skin was noticeably brighter. This is the first pigmentation regimen I've been able to use consistently without fear of a reaction. Truly impressive!</span>
+        </p>
+        <div class="reviewer">
+          <div class="reviewer-avatar"><i class="fas fa-user"></i></div>
+          <div>
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <div class="reviewer-name">
+              <span data-lang="fil">Ana Reyes</span>
+              <span data-lang="en">Sophia Williams</span>
+            </div>
+            <div class="reviewer-detail">
+              <span data-lang="fil">29 taong gulang · Cebu · Ginamit ng 5 linggo</span>
+              <span data-lang="en">Age 29 · Sydney, Australia · Used for 5 weeks</span>
+            </div>
+            <div class="verified">
+              <i class="fas fa-check"></i> <span data-lang="fil">Verified na Pagbili</span>
+              <span data-lang="en">Verified Purchase</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     PRICING / CTA
+============================= -->
+<section id="pricing">
+  <div class="container">
+    <div class="pricing-content">
+      <h2>
+        <span data-lang="fil">Kunin Ang ORIA Dark Spot Set Ngayon</span>
+        <span data-lang="en">Get Your ORIA Anti-Pigmentation Set Today</span>
+      </h2>
+      <p>
+        <span data-lang="fil">Mag-invest sa iyong balat — huwag nang mag-aksaya ng pera sa mga produktong hindi epektibo.</span>
+        <span data-lang="en">Invest in your skin — stop wasting money on products that don't deliver results.</span>
+      </p>
+
+      <div class="price-box">
+        <div class="price-label">
+          <span data-lang="fil">5-Hakbang na Malalim na Dark Spot Set</span>
+          <span data-lang="en">5-Step Advanced Pigmentation Control Set</span>
+        </div>
+        <div class="price-main">$51.60</div>
+        <div class="price-orig">
+          <span data-lang="fil">Orihinal na Presyo: </span>
+          <span data-lang="en">Original: </span>
+          $71.20
+        </div>
+        <div class="price-save">
+          <span data-lang="fil">Makatipid ng $19.60 — 28% OFF</span>
+          <span data-lang="en">Save $19.60 — 28% OFF</span>
+        </div>
+        <ul class="includes-list">
+          <li>
+            <span data-lang="fil"><i class="fas fa-pump-soap"></i> Panlinis ng Mukha (120ml)</span>
+            <span data-lang="en"><i class="fas fa-pump-soap"></i> Purifying Cleanser (120ml)</span>
+          </li>
+          <li>
+            <span data-lang="fil"><i class="fas fa-droplet"></i> Activating Essence (150ml)</span>
+            <span data-lang="en"><i class="fas fa-droplet"></i> Activating Essence (150ml)</span>
+          </li>
+          <li>
+            <span data-lang="fil"><i class="fas fa-prescription-bottle"></i> Super Essence (30ml)</span>
+            <span data-lang="en"><i class="fas fa-prescription-bottle"></i> Brightening Serum (30ml)</span>
+          </li>
+          <li>
+            <span data-lang="fil"><i class="fas fa-moon"></i> Krema sa Pagbabago (50ml)</span>
+            <span data-lang="en"><i class="fas fa-moon"></i> Recovery Cream (50ml)</span>
+          </li>
+          <li>
+            <span data-lang="fil"><i class="fas fa-gift"></i> Sunscreen (30ml)</span>
+            <span data-lang="en"><i class="fas fa-gift"></i> Sunscreen Gift (30ml)</span>
+          </li>
+        </ul>
+      </div>
+
+      <a href="#register" class="cta-btn-lg">
+        <span data-lang="fil"><i class="fas fa-leaf"></i> Mag-order at Makakuha ng Deal Ngayon</span>
+        <span data-lang="en"><i class="fas fa-leaf"></i> Order Now & Get the Deal</span>
+      </a>
+      <p class="guarantee">
+        <span data-lang="fil"><i class="fas fa-lock"></i> 30-araw na money-back guarantee kung hindi satisfied · Delivery sa buong bansa</span>
+        <span data-lang="en"><i class="fas fa-lock"></i> 30-day money-back guarantee · Nationwide delivery</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     EMAIL CAPTURE / REGISTER
+============================= -->
+<section id="register">
+  <div class="container">
+    <div class="register-box">
+      <div class="section-label" style="text-align:center">
+        <span data-lang="fil">Eksklusibong Alok</span>
+        <span data-lang="en">Exclusive Offer</span>
+      </div>
+      <h2>
+        <span data-lang="fil">Mag-register para sa Konsultasyon at Espesyal na Alok</span>
+        <span data-lang="en">Register for Expert Consultation and Special Offer</span>
+      </h2>
+      <p>
+        <span data-lang="fil">Iwanan ang iyong impormasyon — ang aming eksperto ay makikipag-ugnayan para sa libreng konsultasyon at magpapadala ng 15% discount code para sa iyong unang order.</span>
+        <span data-lang="en">Leave your details — our skincare expert will reach out with a free consultation and send you a 15% discount code for your first order.</span>
+      </p>
+
+      <form class="register-form" id="registrationForm" onsubmit="handleSubmit(event)" novalidate aria-describedby="formError">
+        <div class="input-row">
+          <input
+            type="text"
+            class="form-input"
+            id="nameInput"
+            placeholder="Buong pangalan"
+            required
+            aria-label="Full name"
+            aria-describedby="formError"
+          />
+          <input
+            type="tel"
+            class="form-input"
+            id="phoneInput"
+            placeholder="Telepono"
+            required
+            aria-label="Phone number"
+            aria-describedby="formError"
+            pattern="^(0|\+84)[0-9]{9}$"
+          />
+        </div>
+        <input
+          type="email"
+          class="form-input"
+          id="emailInput"
+          placeholder="Iyong email"
+          required
+          aria-label="Email address"
+          aria-describedby="formError"
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        />
+        <select class="form-select" id="concernSelect" aria-label="Main skin concern" aria-describedby="formError">
+          <option value="" disabled selected>Pangunahing alalahanin sa balat</option>
+          <option value="melasma">Melasma</option>
+          <option value="freckles">Mga tuldok</option>
+          <option value="dark-spots">Mga dark spot</option>
+          <option value="dull-skin">Mapurol na balat</option>
+          <option value="other">Iba pa</option>
+        </select>
+        <button type="submit" class="submit-btn">
+          <span data-lang="fil"><i class="fas fa-leaf"></i> Mag-register para sa Deal Ngayon</span>
+          <span data-lang="en"><i class="fas fa-leaf"></i> Register for My Special Offer</span>
+        </button>
+        <p class="form-note" id="formError" role="alert" aria-live="assertive" style="color:#c0392b;display:none">
+          <span data-lang="fil">Pakipunan ang lahat ng kinakailangang impormasyon.</span>
+          <span data-lang="en">Please fill in all required fields.</span>
+        </p>
+        <p class="form-note">
+          <span data-lang="fil"><i class="fas fa-lock"></i> Ang iyong impormasyon ay ganap na protektado. Walang spam.</span>
+          <span data-lang="en"><i class="fas fa-lock"></i> Your information is completely secure. No spam.</span>
+        </p>
+      </form>
+
+      <div class="success-msg" id="successMsg">
+        <span data-lang="fil"><i class="fas fa-champagne-glasses"></i> Salamat sa pag-register! Ang aming eksperto ay makikipag-ugnayan sa loob ng 24 na oras. Ang iyong 15% discount code ay naipadala na sa iyong email.</span>
+        <span data-lang="en"><i class="fas fa-champagne-glasses"></i> Thank you for registering! Our expert will contact you within 24 hours. Your 15% discount code has been sent to your email.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     FOOTER
+============================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="./Untitled-1.png" alt="ORIA" />
+        </div>
+        <p class="footer-tagline">
+          <span data-lang="fil">Malalim na dark spot treatment set — pinananaliksik at pinaunlad na may internasyonal na antas ng mga aktibong sangkap, nagbibigay ng natural na maliwanag at makinis na balat na pangmatagalan.</span>
+          <span data-lang="en">Advanced anti-pigmentation skincare system — researched and developed with internationally acclaimed active ingredients for naturally radiant, long-lasting results.</span>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>
+          <span data-lang="fil">Mga Produkto</span>
+          <span data-lang="en">Products</span>
+        </h4>
+        <ul class="footer-links">
+          <li><a href="#products">
+            <span data-lang="fil">Panlinis ng Mukha</span>
+            <span data-lang="en">Purifying Cleanser</span>
+          </a></li>
+          <li><a href="#products">
+            <span data-lang="fil">Activating Essence</span>
+            <span data-lang="en">Activating Essence</span>
+          </a></li>
+          <li><a href="#products">
+            <span data-lang="fil">Super Essence</span>
+            <span data-lang="en">Brightening Serum</span>
+          </a></li>
+          <li><a href="#products">
+            <span data-lang="fil">Krema sa Pagbabago</span>
+            <span data-lang="en">Recovery Cream</span>
+          </a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>
+          <span data-lang="fil">Suporta</span>
+          <span data-lang="en">Support</span>
+        </h4>
+        <ul class="footer-links">
+          <li><a href="#register">
+            <span data-lang="fil">Libreng Konsultasyon</span>
+            <span data-lang="en">Free Consultation</span>
+          </a></li>
+          <li><a href="#testimonials">
+            <span data-lang="fil">Mga Review ng Customer</span>
+            <span data-lang="en">Customer Reviews</span>
+          </a></li>
+          <li><a href="#ingredients">
+            <span data-lang="fil">Mga Sangkap</span>
+            <span data-lang="en">Ingredients</span>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <div class="footer-bottom">
+      <span>© 2025 ORIA. 
+        <span data-lang="fil">Lahat ng karapatan ay nakalaan.</span>
+        <span data-lang="en">All rights reserved.</span>
+      </span>
+      <span>
+        <span data-lang="fil"><i class="fas fa-leaf"></i> Natural · Agham · Epektibo</span>
+        <span data-lang="en"><i class="fas fa-leaf"></i> Nature · Science · Results</span>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================
+     JAVASCRIPT
+============================= -->
+<script>
+  /* ── Language Toggle ── */
+  var FORM_TRANSLATIONS = {
+    fil: {
+      name:    'Buong pangalan',
+      phone:   'Telepono',
+      email:   'Iyong email',
+      options: {
+        '':          'Pangunahing alalahanin sa balat',
+        'melasma':   'Melasma',
+        'freckles':  'Mga tuldok',
+        'dark-spots':'Mga dark spot',
+        'dull-skin': 'Mapurol na balat',
+        'other':     'Iba pa'
+      }
+    },
+    en: {
+      name:    'Full name',
+      phone:   'Phone',
+      email:   'Your email',
+      options: {
+        '':          'Main skin concern',
+        'melasma':   'Melasma',
+        'freckles':  'Freckles',
+        'dark-spots':'Dark spots',
+        'dull-skin': 'Dull skin',
+        'other':     'Other'
+      }
+    }
+  };
+
+  function setLang(lang) {
+    document.body.classList.toggle('lang-en', lang === 'en');
+    document.documentElement.lang = lang === 'en' ? 'en' : 'fil';
+    document.getElementById('btn-fil').classList.toggle('active', lang === 'fil');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-fil').setAttribute('aria-pressed', lang === 'fil');
+    document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
+
+    /* Update form placeholders */
+    var t = FORM_TRANSLATIONS[lang] || FORM_TRANSLATIONS['fil'];
+    document.getElementById('nameInput').placeholder  = t.name;
+    document.getElementById('phoneInput').placeholder = t.phone;
+    document.getElementById('emailInput').placeholder = t.email;
+
+    /* Update select options */
+    Array.from(document.getElementById('concernSelect').options).forEach(function(opt) {
+      if (Object.prototype.hasOwnProperty.call(t.options, opt.value)) {
+        opt.text = t.options[opt.value];
+      }
+    });
+
+    try { localStorage.setItem('oria_lang', lang); } catch(e) { console.warn('localStorage unavailable:', e); }
+  }
+
+  /* Restore saved language preference */
+  (function() {
+    try {
+      var saved = localStorage.getItem('oria_lang');
+      if (saved === 'en') setLang('en');
+    } catch(e) {}
+  })();
+
+  /* ── Scroll Reveal ── */
+  var revealEls = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(function(el) { observer.observe(el); });
+
+  /* ── Form Submission ── */
+  function handleSubmit(event) {
+    event.preventDefault();
+    var name    = document.getElementById('nameInput').value.trim();
+    var phone   = document.getElementById('phoneInput').value.trim();
+    var email   = document.getElementById('emailInput').value.trim();
+    var concern = document.getElementById('concernSelect').value;
+    var errEl   = document.getElementById('formError');
+
+    var emailValid = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/.test(email);
+    var phoneValid = /^(0|\+84)[0-9]{9}$/.test(phone);
+
+    if (!name || !phone || !phoneValid || !email || !emailValid || !concern) {
+      errEl.style.display = 'block';
+      errEl.focus();
+      return;
+    }
+    errEl.style.display = 'none';
+
+    /* In production: replace with your actual API endpoint or form service */
+    var form = document.getElementById('registrationForm');
+    var successMsg = document.getElementById('successMsg');
+    form.style.display = 'none';
+    successMsg.style.display = 'block';
+  }
+
+  /* ── Combo Hover Popup ── */
+  var comboCta = document.querySelector('.combo-cta');
+  var comboOrderPopup = document.getElementById('comboOrderPopup');
+  var closeOrderPopupBtn = document.getElementById('closeOrderPopup');
+  var comboOrderForm = document.getElementById('comboOrderForm');
+  var popupOrderError = document.getElementById('popupOrderError');
+  var popupFullNameInput = document.getElementById('popupFullName');
+  var popupPhoneInput = document.getElementById('popupPhone');
+  var popupEmailInput = document.getElementById('popupEmail');
+  var HOVER_DELAY_MS = 180;
+  var hoverOpenTimer;
+
+  function openOrderPopup() {
+    if (!comboOrderPopup) return;
+    comboOrderPopup.classList.add('active');
+    comboOrderPopup.setAttribute('aria-hidden', 'false');
+    if (popupOrderError) popupOrderError.style.display = 'none';
+  }
+
+  function closeOrderPopup() {
+    if (!comboOrderPopup) return;
+    comboOrderPopup.classList.remove('active');
+    comboOrderPopup.setAttribute('aria-hidden', 'true');
+    if (popupOrderError) popupOrderError.style.display = 'none';
+  }
+
+  if (comboCta && comboOrderPopup) {
+    comboCta.addEventListener('mouseenter', function() {
+      hoverOpenTimer = setTimeout(openOrderPopup, HOVER_DELAY_MS);
+    });
+    comboCta.addEventListener('mouseleave', function() {
+      clearTimeout(hoverOpenTimer);
+    });
+    comboCta.addEventListener('focus', openOrderPopup);
+    comboCta.addEventListener('blur', function() {
+      clearTimeout(hoverOpenTimer);
+    });
+    comboCta.addEventListener('click', function(e) {
+      e.preventDefault();
+      openOrderPopup();
+    });
+  }
+
+  if (closeOrderPopupBtn) {
+    closeOrderPopupBtn.addEventListener('click', closeOrderPopup);
+  }
+
+  if (comboOrderPopup) {
+    comboOrderPopup.addEventListener('click', function(e) {
+      if (e.target === comboOrderPopup) closeOrderPopup();
+    });
+  }
+
+  if (comboOrderForm) {
+    comboOrderForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var popupFullName = popupFullNameInput.value.trim();
+      var popupPhone = popupPhoneInput.value.trim();
+      var popupEmail = popupEmailInput.value.trim();
+      if (!popupFullName || !popupPhone || !popupEmail) {
+        if (popupOrderError) popupOrderError.style.display = 'block';
+        return;
+      }
+      if (popupOrderError) popupOrderError.style.display = 'none';
+      comboOrderForm.reset();
+      closeOrderPopup();
+    });
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && comboOrderPopup && comboOrderPopup.classList.contains('active')) closeOrderPopup();
+  });
+
+  /* ── Smooth-scroll for anchor links ── */
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
