@@ -42,7 +42,7 @@
     body {
       font-family: 'Inter', sans-serif;
       color: var(--text);
-      line-height: 1.65;
+      line-height: 1.7;
       background:
         radial-gradient(circle at 15% 10%, rgba(175, 195, 110, .24), transparent 40%),
         radial-gradient(circle at 85% 15%, rgba(217, 164, 65, .22), transparent 42%),
@@ -54,15 +54,17 @@
     .container { width: min(var(--container-max-width), 100% - 32px); margin: 0 auto; }
     section { padding: clamp(56px, 8vw, 96px) 0; }
     h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
-    h1 { font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.05; letter-spacing: -.03em; }
-    h2 { font-size: clamp(1.7rem, 3.5vw, 2.75rem); line-height: 1.12; letter-spacing: -.02em; }
-    h3 { font-size: clamp(1.05rem, 2vw, 1.28rem); line-height: 1.25; }
-    p { color: var(--text-mid); font-size: clamp(.95rem, 1.5vw, 1.02rem); }
+    h1 { font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.05; letter-spacing: -.03em; font-weight: 700; }
+    h2 { font-size: clamp(1.75rem, 3.5vw, 2.75rem); line-height: 1.15; letter-spacing: -.02em; font-weight: 600; }
+    h3 { font-size: clamp(1.1rem, 2vw, 1.35rem); line-height: 1.3; font-weight: 600; }
+    h4 { font-size: clamp(1rem, 1.6vw, 1.1rem); line-height: 1.35; font-weight: 600; }
+    p { color: var(--text-mid); font-size: clamp(.95rem, 1.5vw, 1.02rem); line-height: 1.75; }
 
     .section-label {
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      font-family: 'Inter', sans-serif;
       font-size: .76rem;
       text-transform: uppercase;
       letter-spacing: .14em;
@@ -87,7 +89,10 @@
       gap: 10px;
       text-decoration: none;
       cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: .925rem;
       font-weight: 600;
+      letter-spacing: .01em;
       transition: .25s ease;
       width: fit-content;
       min-height: 44px;
@@ -124,6 +129,7 @@
       gap: 16px;
     }
     .brand {
+      font-family: 'Inter', sans-serif;
       font-size: 1.05rem;
       font-weight: 800;
       letter-spacing: .18em;
@@ -358,7 +364,7 @@
       background: linear-gradient(180deg, rgba(175,195,110,.42), rgba(217,164,65,.18));
     }
     .product-body { padding: 16px 16px 18px; }
-    .product-name { font-weight: 700; margin-bottom: 3px; color: var(--text); }
+    .product-name { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 600; margin-bottom: 3px; color: var(--text); }
     .product-tag { font-size: .82rem; color: var(--accent-secondary); font-weight: 600; margin-bottom: 10px; }
     .bullet-list, .ing-list { list-style: none; display: grid; gap: 6px; }
     .bullet-list li, .ing-list li { font-size: .85rem; color: var(--text-mid); display: flex; gap: 8px; }
@@ -724,7 +730,7 @@
       background: #fff9e8;
       border-radius: 999px;
       padding: 13px 16px;
-      font-family: inherit;
+      font-family: 'Inter', sans-serif;
       font-size: .95rem;
       color: var(--text);
       outline: none;
@@ -746,7 +752,7 @@
 
     footer { background: #6a673f; color: #f6edd0; padding: 42px 0 28px; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 24px; }
-    .footer-grid h4 { color: #fff; margin-bottom: 10px; font-size: .86rem; letter-spacing: .08em; text-transform: uppercase; }
+    .footer-grid h4 { font-family: 'Inter', sans-serif; color: #fff; margin-bottom: 10px; font-size: .86rem; letter-spacing: .08em; text-transform: uppercase; }
     .footer-links { list-style: none; display: grid; gap: 7px; }
     .footer-links a { color: #f0e4ba; text-decoration: none; font-size: .88rem; }
     .footer-links a:hover { color: #fff; }
