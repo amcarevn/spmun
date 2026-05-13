@@ -1084,7 +1084,7 @@
         </div>
         <p class="hero-offer-note" data-i18n="heroOfferNote">Choose the complete ACNE-PURE routine for a premium tropical acne-care ritual while saving more on the full system.</p>
         <div class="hero-offer-actions">
-          <button type="button" class="cta-btn" id="heroOfferCta">
+          <button type="button" class="cta-btn" id="heroOfferCta" aria-haspopup="dialog" aria-controls="promoModal" aria-expanded="false">
             <span data-i18n="heroOfferCta">Start Your ACNE-PURE Routine</span> <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>
@@ -1726,15 +1726,21 @@
     var promoModalSecondary = document.getElementById('promoModalSecondary');
     var heroOfferCta = document.getElementById('heroOfferCta');
     function closePromoModal() {
-      if (!promoModal) { return; }
+      if (!promoModal || !promoModal.classList.contains('open')) { return; }
       promoModal.classList.remove('open');
       promoModal.setAttribute('aria-hidden', 'true');
+      if (heroOfferCta) {
+        heroOfferCta.setAttribute('aria-expanded', 'false');
+      }
       document.body.style.overflow = '';
     }
     function openPromoModal() {
       if (!promoModal) { return; }
       promoModal.classList.add('open');
       promoModal.setAttribute('aria-hidden', 'false');
+      if (heroOfferCta) {
+        heroOfferCta.setAttribute('aria-expanded', 'true');
+      }
       document.body.style.overflow = 'hidden';
     }
     if (heroOfferCta) {
@@ -1754,7 +1760,7 @@
       });
     }
     document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape' && promoModal && promoModal.classList.contains('open')) {
+      if (event.key === 'Escape') {
         closePromoModal();
       }
     });
