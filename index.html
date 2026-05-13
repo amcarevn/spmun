@@ -1084,7 +1084,7 @@
         </div>
         <p class="hero-offer-note" data-i18n="heroOfferNote">Choose the complete ACNE-PURE routine for a premium tropical acne-care ritual while saving more on the full system.</p>
         <div class="hero-offer-actions">
-          <button type="button" class="cta-btn" id="heroOfferCta" aria-haspopup="dialog" aria-controls="promoModal" aria-expanded="false">
+          <button type="button" class="cta-btn" id="heroOfferCta" aria-haspopup="dialog" aria-controls="promoModal">
             <span data-i18n="heroOfferCta">Start Your ACNE-PURE Routine</span> <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>
@@ -1100,7 +1100,7 @@
 
   <div class="promo-modal" id="promoModal" aria-hidden="true">
     <div class="promo-modal-panel" role="dialog" aria-modal="true" aria-labelledby="promoModalTitle" aria-describedby="promoModalText">
-      <button type="button" class="promo-modal-close" id="promoModalClose" aria-label="Close popup">
+      <button type="button" class="promo-modal-close" id="promoModalClose" aria-label="Close dialog">
         <i class="fa-solid fa-xmark"></i>
       </button>
       <div class="promo-modal-kicker" data-i18n="promoModalKicker">Premium Full Set</div>
@@ -1725,6 +1725,7 @@
     var promoModalClose = document.getElementById('promoModalClose');
     var promoModalSecondary = document.getElementById('promoModalSecondary');
     var heroOfferCta = document.getElementById('heroOfferCta');
+    var originalBodyOverflow = document.body.style.overflow;
     function handlePromoModalKeydown(event) {
       if (event.key === 'Escape') {
         closePromoModal();
@@ -1738,7 +1739,7 @@
         heroOfferCta.setAttribute('aria-expanded', 'false');
       }
       document.removeEventListener('keydown', handlePromoModalKeydown);
-      document.body.style.overflow = '';
+      document.body.style.overflow = originalBodyOverflow;
     }
     function openPromoModal() {
       if (!promoModal) { return; }
@@ -1748,6 +1749,7 @@
         heroOfferCta.setAttribute('aria-expanded', 'true');
       }
       document.addEventListener('keydown', handlePromoModalKeydown);
+      originalBodyOverflow = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
     }
     if (heroOfferCta) {
