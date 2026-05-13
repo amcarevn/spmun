@@ -978,7 +978,7 @@
       <p id="promoModalText" data-i18n="promoModalText">Leave your details below to receive the exclusive ACNE-PURE offer.</p>
       <form class="promo-modal-form" id="promoModalForm" novalidate>
         <input type="text" class="form-input" id="promoNameInput" placeholder="Full name" aria-label="Full name" required data-i18n-placeholder="promoModalNamePlaceholder" data-i18n-aria-label="promoModalNameAria" />
-        <input type="tel" class="form-input" id="promoPhoneInput" placeholder="Phone Number" aria-label="Phone Number" required pattern="^\+?[1-9]\d{7,14}$" data-i18n-placeholder="promoModalPhonePlaceholder" data-i18n-aria-label="promoModalPhoneAria" />
+        <input type="tel" class="form-input" id="promoPhoneInput" placeholder="Phone Number" aria-label="Phone Number" required pattern="^\+?\d{7,15}$" data-i18n-placeholder="promoModalPhonePlaceholder" data-i18n-aria-label="promoModalPhoneAria" />
         <input type="email" class="form-input" id="promoEmailInput" placeholder="Your Email" aria-label="Your Email" required data-i18n-placeholder="promoModalEmailPlaceholder" data-i18n-aria-label="promoModalEmailAria" />
         <div class="promo-modal-actions">
           <button type="submit" class="cta-btn" id="promoModalPrimary">
@@ -1144,7 +1144,7 @@
         <form class="register-form" id="registrationForm" onsubmit="handleSubmit(event)" novalidate>
           <div class="input-row">
             <input type="text" class="form-input" id="nameInput" placeholder="Full name" required aria-label="Full name" data-i18n-placeholder="namePlaceholder" data-i18n-aria-label="nameAria" />
-            <input type="tel" class="form-input" id="phoneInput" placeholder="Phone number" required aria-label="Phone number" pattern="^\+?[1-9]\d{7,14}$" data-i18n-placeholder="phonePlaceholder" data-i18n-aria-label="phoneAria" />
+            <input type="tel" class="form-input" id="phoneInput" placeholder="Phone number" required aria-label="Phone number" pattern="^\+?\d{7,15}$" data-i18n-placeholder="phonePlaceholder" data-i18n-aria-label="phoneAria" />
           </div>
           <input type="email" class="form-input" id="emailInput" placeholder="Email" required aria-label="Email address" data-i18n-placeholder="emailPlaceholder" data-i18n-aria-label="emailAria" />
           <select class="form-select" id="concernSelect" required aria-label="Main skin concern" data-i18n-aria-label="concernAria">
@@ -1476,7 +1476,7 @@
       var form = document.getElementById('registrationForm');
       var success = document.getElementById('successMsg');
       var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      var phoneOk = /^\+?[1-9]\d{7,14}$/.test(phone);
+      var phoneOk = /^\+?\d{7,15}$/.test(phone);
       if (!name || !phoneOk || !emailOk || !concern) {
         err.style.display = 'block';
         return;
