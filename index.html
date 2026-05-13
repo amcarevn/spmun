@@ -773,28 +773,20 @@
       color: var(--text-soft);
       line-height: 1.7;
     }
-    .promo-modal-price {
-      display: inline-flex;
-      align-items: baseline;
-      justify-content: center;
+    .promo-modal-form {
+      display: grid;
       gap: 12px;
-      padding: 16px 18px;
-      border-radius: 24px;
-      background: linear-gradient(135deg, rgba(175,195,110,.18), rgba(217,164,65,.18));
-      border: 1px solid rgba(217,164,65,.24);
+      text-align: left;
     }
-    .promo-modal-price-old {
-      font-size: 1rem;
+    .promo-modal-form .form-input {
+      background: rgba(255,255,255,.94);
+      border-color: rgba(163,141,79,.2);
+    }
+    .promo-modal-note {
+      font-size: .82rem;
       color: var(--text-soft);
-      text-decoration: line-through;
-      text-decoration-color: rgba(108,106,69,.35);
-    }
-    .promo-modal-price-new {
-      font-size: clamp(2rem, 5vw, 2.8rem);
-      line-height: 1;
-      font-weight: 800;
-      color: var(--accent-secondary);
-      letter-spacing: -.03em;
+      text-align: left;
+      line-height: 1.6;
     }
     .promo-modal-actions {
       display: flex;
@@ -981,17 +973,21 @@
       <button type="button" class="promo-modal-close" id="promoModalClose" aria-label="Close dialog">
         <i class="fa-solid fa-xmark"></i>
       </button>
-      <div class="promo-modal-kicker" data-i18n="promoModalKicker">Premium Full Set</div>
-      <h3 id="promoModalTitle" data-i18n="promoModalTitle">Start your premium ACNE-PURE routine</h3>
-      <p id="promoModalText" data-i18n="promoModalText">Unlock the 5-step tropical skincare system with the complete combo and enjoy a clean, calm, minimal consultation journey.</p>
-      <div class="promo-modal-price">
-        <span class="promo-modal-price-old">$104</span>
-        <span class="promo-modal-price-new">$80</span>
-      </div>
+      <div class="promo-modal-kicker" data-i18n="promoModalKicker">EXCLUSIVE OFFER</div>
+      <h3 id="promoModalTitle" data-i18n="promoModalTitle">Start Your ACNE-PURE Routine</h3>
+      <p id="promoModalText" data-i18n="promoModalText">Leave your details below to receive the exclusive ACNE-PURE offer.</p>
+      <form class="promo-modal-form" id="promoModalForm" novalidate>
+        <input type="text" class="form-input" id="promoNameInput" placeholder="Full name" aria-label="Full name" data-i18n-placeholder="promoModalNamePlaceholder" data-i18n-aria-label="promoModalNameAria" />
+        <input type="tel" class="form-input" id="promoPhoneInput" placeholder="Phone Number" aria-label="Phone Number" data-i18n-placeholder="promoModalPhonePlaceholder" data-i18n-aria-label="promoModalPhoneAria" />
+        <input type="email" class="form-input" id="promoEmailInput" placeholder="Your Email" aria-label="Your Email" data-i18n-placeholder="promoModalEmailPlaceholder" data-i18n-aria-label="promoModalEmailAria" />
+        <div class="promo-modal-actions">
+          <button type="submit" class="cta-btn" id="promoModalPrimary">
+            <span data-i18n="promoModalPrimary">Sign Up for Offers</span> <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </form>
+      <div class="promo-modal-note" data-i18n="promoModalNote">We’ll use your details to help continue your routine sign-up.</div>
       <div class="promo-modal-actions">
-        <a href="#register" class="cta-btn" id="promoModalPrimary">
-          <span data-i18n="promoModalPrimary">Continue to Consultation</span> <i class="fa-solid fa-arrow-right"></i>
-        </a>
         <button type="button" class="cta-btn-outline" id="promoModalSecondary" data-i18n="promoModalSecondary">Maybe Later</button>
       </div>
     </div>
@@ -1267,10 +1263,17 @@
         finalTitle: 'Clearer Skin Starts With The Right System',
         finalText: 'A complete acne-care routine designed for oily skin in hot & humid climates.',
         finalCta: 'Start Your ACNE-PURE Routine',
-        promoModalKicker: 'Premium Full Set',
-        promoModalTitle: 'Start your premium ACNE-PURE routine',
-        promoModalText: 'Unlock the 5-step tropical skincare system with the complete combo and enjoy a clean, calm, minimal consultation journey.',
-        promoModalPrimary: 'Continue to Consultation',
+        promoModalKicker: 'EXCLUSIVE OFFER',
+        promoModalTitle: 'Start Your ACNE-PURE Routine',
+        promoModalText: 'Leave your details below to receive the exclusive ACNE-PURE offer.',
+        promoModalNamePlaceholder: 'Full name',
+        promoModalNameAria: 'Full name',
+        promoModalPhonePlaceholder: 'Phone Number',
+        promoModalPhoneAria: 'Phone Number',
+        promoModalEmailPlaceholder: 'Your Email',
+        promoModalEmailAria: 'Your Email',
+        promoModalPrimary: 'Sign Up for Offers',
+        promoModalNote: 'We’ll use your details to help continue your routine sign-up.',
         promoModalSecondary: 'Maybe Later',
         registerLabel: 'Priority Skin Consultation',
         registerTitle: 'Book your ACNE-PURE full-set support',
@@ -1367,10 +1370,17 @@
         finalTitle: 'Mas Malinaw na Balat ay Nagsisimula sa Tamang Sistema',
         finalText: 'Isang kumpletong acne-care routine na ginawa para sa mamantikang balat sa mainit at mahalumigmig na klima.',
         finalCta: 'Simulan ang Iyong ACNE-PURE Routine',
-        promoModalKicker: 'Premium na Full Set',
-        promoModalTitle: 'Simulan ang premium mong ACNE-PURE routine',
-        promoModalText: 'I-unlock ang 5-hakbang na tropical skincare system gamit ang kumpletong combo at maranasan ang malinis, kalmado, at minimal na consultation journey.',
-        promoModalPrimary: 'Magpatuloy sa Consultation',
+        promoModalKicker: 'EXCLUSIVE OFFER',
+        promoModalTitle: 'Simulan ang Iyong ACNE-PURE Routine',
+        promoModalText: 'Ilagay ang iyong detalye sa ibaba para matanggap ang exclusive ACNE-PURE offer.',
+        promoModalNamePlaceholder: 'Buong pangalan',
+        promoModalNameAria: 'Buong pangalan',
+        promoModalPhonePlaceholder: 'Numero ng Telepono',
+        promoModalPhoneAria: 'Numero ng Telepono',
+        promoModalEmailPlaceholder: 'Iyong Email',
+        promoModalEmailAria: 'Iyong Email',
+        promoModalPrimary: 'Mag-sign Up para sa Offers',
+        promoModalNote: 'Gagamitin ang iyong detalye para maipagpatuloy ang iyong routine sign-up.',
         promoModalSecondary: 'Mamaya Na',
         registerLabel: 'Priority Skin Consultation',
         registerTitle: 'I-book ang iyong ACNE-PURE full-set support',
@@ -1478,6 +1488,7 @@
 
     var promoModal = document.getElementById('promoModal');
     var promoModalClose = document.getElementById('promoModalClose');
+    var promoModalForm = document.getElementById('promoModalForm');
     var promoModalSecondary = document.getElementById('promoModalSecondary');
     var heroOfferCta = document.getElementById('heroOfferCta');
     var originalBodyOverflow = '';
@@ -1518,6 +1529,31 @@
     }
     if (promoModalSecondary) {
       promoModalSecondary.addEventListener('click', closePromoModal);
+    }
+    if (promoModalForm) {
+      promoModalForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var promoNameInput = document.getElementById('promoNameInput');
+        var promoPhoneInput = document.getElementById('promoPhoneInput');
+        var promoEmailInput = document.getElementById('promoEmailInput');
+        var nameInput = document.getElementById('nameInput');
+        var phoneInput = document.getElementById('phoneInput');
+        var emailInput = document.getElementById('emailInput');
+        if (promoNameInput && nameInput) {
+          nameInput.value = promoNameInput.value.trim();
+        }
+        if (promoPhoneInput && phoneInput) {
+          phoneInput.value = promoPhoneInput.value.trim();
+        }
+        if (promoEmailInput && emailInput) {
+          emailInput.value = promoEmailInput.value.trim();
+        }
+        closePromoModal();
+        var registerSection = document.getElementById('register');
+        if (registerSection) {
+          registerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
     }
     if (promoModal) {
       promoModal.addEventListener('click', function(event) {
