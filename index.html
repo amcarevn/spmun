@@ -1722,7 +1722,6 @@
     }
 
     var promoModal = document.getElementById('promoModal');
-    var promoModalPanel = promoModal ? promoModal.querySelector('.promo-modal-panel') : null;
     var promoModalClose = document.getElementById('promoModalClose');
     var promoModalSecondary = document.getElementById('promoModalSecondary');
     var heroOfferCta = document.getElementById('heroOfferCta');
@@ -1752,11 +1751,6 @@
         if (event.target === promoModal) {
           closePromoModal();
         }
-      });
-    }
-    if (promoModalPanel) {
-      promoModalPanel.addEventListener('click', function(event) {
-        event.stopPropagation();
       });
     }
     document.addEventListener('keydown', function(event) {
