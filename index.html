@@ -1263,7 +1263,7 @@
         finalTitle: 'Clearer Skin Starts With The Right System',
         finalText: 'A complete acne-care routine designed for oily skin in hot & humid climates.',
         finalCta: 'Start Your ACNE-PURE Routine',
-        promoModalKicker: 'EXCLUSIVE OFFER',
+        promoModalKicker: 'EKSKLUSIBONG ALOK',
         promoModalTitle: 'Start Your ACNE-PURE Routine',
         promoModalText: 'Leave your details below to receive the exclusive ACNE-PURE offer.',
         promoModalNamePlaceholder: 'Full name',
@@ -1370,7 +1370,7 @@
         finalTitle: 'Mas Malinaw na Balat ay Nagsisimula sa Tamang Sistema',
         finalText: 'Isang kumpletong acne-care routine na ginawa para sa mamantikang balat sa mainit at mahalumigmig na klima.',
         finalCta: 'Simulan ang Iyong ACNE-PURE Routine',
-        promoModalKicker: 'EXCLUSIVE OFFER',
+        promoModalKicker: 'EKSKLUSIBONG ALOK',
         promoModalTitle: 'Simulan ang Iyong ACNE-PURE Routine',
         promoModalText: 'Ilagay ang iyong detalye sa ibaba para matanggap ang exclusive ACNE-PURE offer.',
         promoModalNamePlaceholder: 'Buong pangalan',
@@ -1500,6 +1500,11 @@
         closePromoModal();
       }
     }
+    function handlePromoModalBackdropClick(event) {
+      if (event.target === promoModal) {
+        closePromoModal();
+      }
+    }
     function closePromoModal() {
       if (!promoModal || !promoModal.classList.contains('open')) { return; }
       promoModal.classList.remove('open');
@@ -1508,6 +1513,7 @@
         heroOfferCta.setAttribute('aria-expanded', 'false');
       }
       document.removeEventListener('keydown', handlePromoModalKeydown);
+      promoModal.removeEventListener('click', handlePromoModalBackdropClick);
       document.body.style.overflow = originalBodyOverflow;
     }
     function openPromoModal() {
@@ -1518,6 +1524,7 @@
         heroOfferCta.setAttribute('aria-expanded', 'true');
       }
       document.addEventListener('keydown', handlePromoModalKeydown);
+      promoModal.addEventListener('click', handlePromoModalBackdropClick);
       originalBodyOverflow = window.getComputedStyle(document.body).overflow;
       document.body.style.overflow = 'hidden';
     }
@@ -1555,14 +1562,6 @@
         }
       });
     }
-    if (promoModal) {
-      promoModal.addEventListener('click', function(event) {
-        if (event.target === promoModal) {
-          closePromoModal();
-        }
-      });
-    }
-
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
       anchor.addEventListener('click', function(e) {
         if (promoModal && promoModal.classList.contains('open')) {
