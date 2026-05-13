@@ -1725,6 +1725,11 @@
     var promoModalClose = document.getElementById('promoModalClose');
     var promoModalSecondary = document.getElementById('promoModalSecondary');
     var heroOfferCta = document.getElementById('heroOfferCta');
+    function handlePromoModalKeydown(event) {
+      if (event.key === 'Escape') {
+        closePromoModal();
+      }
+    }
     function closePromoModal() {
       if (!promoModal || !promoModal.classList.contains('open')) { return; }
       promoModal.classList.remove('open');
@@ -1732,6 +1737,7 @@
       if (heroOfferCta) {
         heroOfferCta.setAttribute('aria-expanded', 'false');
       }
+      document.removeEventListener('keydown', handlePromoModalKeydown);
       document.body.style.overflow = '';
     }
     function openPromoModal() {
@@ -1741,6 +1747,7 @@
       if (heroOfferCta) {
         heroOfferCta.setAttribute('aria-expanded', 'true');
       }
+      document.addEventListener('keydown', handlePromoModalKeydown);
       document.body.style.overflow = 'hidden';
     }
     if (heroOfferCta) {
@@ -1759,17 +1766,10 @@
         }
       });
     }
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        closePromoModal();
-      }
-    });
 
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
       anchor.addEventListener('click', function(e) {
-        if (promoModal && promoModal.classList.contains('open')) {
-          closePromoModal();
-        }
+        closePromoModal();
         var target = document.querySelector(this.getAttribute('href'));
         if (target) {
           e.preventDefault();
