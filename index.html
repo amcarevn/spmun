@@ -202,9 +202,16 @@
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+      grid-template-columns: 1fr;
       gap: clamp(24px, 4vw, 56px);
       align-items: center;
+    }
+    #hero-image-section {
+      padding: clamp(24px, 4vw, 48px) 0;
+    }
+    .hero-image-container {
+      max-width: 560px;
+      margin: 0 auto;
     }
     .hero-sub { margin: 18px 0 26px; max-width: 620px; }
     .hero-title-line { display: block; }
@@ -753,8 +760,6 @@
     .reveal-delay-2 { transition-delay: .16s; }
 
     @media (max-width: 1024px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-visual-wrap { max-width: 520px; margin: 0 auto; }
       .product-slider { grid-auto-columns: minmax(240px, 40%); }
       .problem-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .pricing-layout { grid-template-columns: 1fr; }
@@ -764,7 +769,7 @@
     @media (max-width: 767px) {
       .container { width: min(var(--container-max-width), 100% - var(--container-gutter-mobile)); }
       .topbar-inner { min-height: 60px; }
-      .hero-grid .reveal, .hero-grid .hero-visual-wrap, .gallery-head > div, .gallery-head .slider-hint,
+      .hero-grid .reveal, .gallery-head > div, .gallery-head .slider-hint,
       .routine-layout .routine-column, .pricing-layout > div, .footer-grid > div, .input-row .form-input,
       .topbar-inner .brand, .topbar-inner .topbar-actions, .topbar-actions .language-picker, .topbar-actions .cta-btn,
       .pricing-card-top > span, .price-compare-row .price-compare-label-wrap, .price-compare-row .price-compare-value { min-width: 0; }
@@ -861,7 +866,12 @@
           <span class="trust-badge"><i class="fa-solid fa-feather"></i> <span data-i18n="heroBadge4">Matte Finish Hydration</span></span>
         </div>
       </div>
-      <div class="hero-visual-wrap reveal reveal-delay-1">
+    </div>
+  </section>
+
+  <section id="hero-image-section">
+    <div class="container hero-image-container reveal">
+      <div class="hero-visual-wrap">
         <img src="./FULL (6).jpeg" alt="ACNE-PURE complete tropical acne treatment set" data-i18n-alt="heroImageAlt" />
         <span class="matte-chip" data-i18n="heroImageChip">Clean • Cool • Recover</span>
       </div>
