@@ -977,9 +977,9 @@
       <h3 id="promoModalTitle" data-i18n="promoModalTitle">Start Your ACNE-PURE Routine</h3>
       <p id="promoModalText" data-i18n="promoModalText">Leave your details below to receive the exclusive ACNE-PURE offer.</p>
       <form class="promo-modal-form" id="promoModalForm" novalidate>
-        <input type="text" class="form-input" id="promoNameInput" placeholder="Full name" aria-label="Full name" data-i18n-placeholder="promoModalNamePlaceholder" data-i18n-aria-label="promoModalNameAria" />
-        <input type="tel" class="form-input" id="promoPhoneInput" placeholder="Phone Number" aria-label="Phone Number" data-i18n-placeholder="promoModalPhonePlaceholder" data-i18n-aria-label="promoModalPhoneAria" />
-        <input type="email" class="form-input" id="promoEmailInput" placeholder="Your Email" aria-label="Your Email" data-i18n-placeholder="promoModalEmailPlaceholder" data-i18n-aria-label="promoModalEmailAria" />
+        <input type="text" class="form-input" id="promoNameInput" placeholder="Full name" aria-label="Full name" required data-i18n-placeholder="promoModalNamePlaceholder" data-i18n-aria-label="promoModalNameAria" />
+        <input type="tel" class="form-input" id="promoPhoneInput" placeholder="Phone Number" aria-label="Phone Number" required pattern="^\+?[1-9]\d{7,14}$" data-i18n-placeholder="promoModalPhonePlaceholder" data-i18n-aria-label="promoModalPhoneAria" />
+        <input type="email" class="form-input" id="promoEmailInput" placeholder="Your Email" aria-label="Your Email" required data-i18n-placeholder="promoModalEmailPlaceholder" data-i18n-aria-label="promoModalEmailAria" />
         <div class="promo-modal-actions">
           <button type="submit" class="cta-btn" id="promoModalPrimary">
             <span data-i18n="promoModalPrimary">Sign Up for Offers</span> <i class="fa-solid fa-arrow-right"></i>
@@ -1263,7 +1263,7 @@
         finalTitle: 'Clearer Skin Starts With The Right System',
         finalText: 'A complete acne-care routine designed for oily skin in hot & humid climates.',
         finalCta: 'Start Your ACNE-PURE Routine',
-        promoModalKicker: 'EKSKLUSIBONG ALOK',
+        promoModalKicker: 'EXCLUSIVE OFFER',
         promoModalTitle: 'Start Your ACNE-PURE Routine',
         promoModalText: 'Leave your details below to receive the exclusive ACNE-PURE offer.',
         promoModalNamePlaceholder: 'Full name',
@@ -1491,7 +1491,7 @@
     var promoModalForm = document.getElementById('promoModalForm');
     var promoModalSecondary = document.getElementById('promoModalSecondary');
     var heroOfferCta = document.getElementById('heroOfferCta');
-    var originalBodyOverflow = '';
+    var originalBodyOverflow = null;
     if (heroOfferCta) {
       heroOfferCta.setAttribute('aria-expanded', 'false');
     }
@@ -1514,7 +1514,11 @@
       }
       document.removeEventListener('keydown', handlePromoModalKeydown);
       promoModal.removeEventListener('click', handlePromoModalBackdropClick);
-      document.body.style.overflow = originalBodyOverflow;
+      document.body.style.overflow = originalBodyOverflow || '';
+      originalBodyOverflow = null;
+      if (heroOfferCta) {
+        heroOfferCta.focus();
+      }
     }
     function openPromoModal() {
       if (!promoModal) { return; }
@@ -1525,7 +1529,9 @@
       }
       document.addEventListener('keydown', handlePromoModalKeydown);
       promoModal.addEventListener('click', handlePromoModalBackdropClick);
-      originalBodyOverflow = window.getComputedStyle(document.body).overflow;
+      if (originalBodyOverflow === null) {
+        originalBodyOverflow = window.getComputedStyle(document.body).overflow;
+      }
       document.body.style.overflow = 'hidden';
     }
     if (heroOfferCta) {
@@ -1540,6 +1546,10 @@
     if (promoModalForm) {
       promoModalForm.addEventListener('submit', function(event) {
         event.preventDefault();
+        if (!promoModalForm.checkValidity()) {
+          promoModalForm.reportValidity();
+          return;
+        }
         var promoNameInput = document.getElementById('promoNameInput');
         var promoPhoneInput = document.getElementById('promoPhoneInput');
         var promoEmailInput = document.getElementById('promoEmailInput');
