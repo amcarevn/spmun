@@ -247,6 +247,94 @@
       width: 100%;
       filter: saturate(.9) contrast(1.04);
     }
+    .hero-offer-card {
+      margin-top: 18px;
+      background: linear-gradient(145deg, rgba(255,255,255,.94), rgba(249,241,209,.92));
+      border: 1px solid rgba(163,141,79,.18);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: clamp(18px, 3vw, 28px);
+      display: grid;
+      gap: 18px;
+    }
+    .hero-offer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .hero-offer-label {
+      font-size: .78rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-weight: 700;
+      color: var(--text-soft);
+    }
+    .hero-save-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #afc36e, #d9a441);
+      color: #fff;
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+      box-shadow: 0 10px 24px rgba(217,164,65,.24);
+    }
+    .hero-offer-prices {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 14px;
+    }
+    .hero-price-card {
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(163,141,79,.14);
+      background: rgba(255,255,255,.72);
+      padding: 18px;
+      display: grid;
+      gap: 10px;
+    }
+    .hero-price-card.featured {
+      background: linear-gradient(145deg, rgba(175,195,110,.2), rgba(217,164,65,.18));
+      border-color: rgba(217,164,65,.34);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.4), 0 16px 36px rgba(176,143,79,.14);
+    }
+    .hero-price-label {
+      font-size: .82rem;
+      color: var(--text-soft);
+      font-weight: 600;
+      letter-spacing: .02em;
+    }
+    .hero-price-card.featured .hero-price-label {
+      color: var(--accent-secondary);
+    }
+    .hero-price-value {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      line-height: 1;
+      font-weight: 800;
+      color: var(--text-soft);
+    }
+    .hero-price-card:not(.featured) .hero-price-value {
+      text-decoration: line-through;
+      text-decoration-color: rgba(108,106,69,.35);
+    }
+    .hero-price-card.featured .hero-price-value {
+      font-size: clamp(2rem, 4vw, 2.9rem);
+      color: var(--accent-secondary);
+      letter-spacing: -.03em;
+    }
+    .hero-offer-note {
+      font-size: .9rem;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+    .hero-offer-actions .cta-btn {
+      width: 100%;
+      justify-content: center;
+    }
     .matte-chip {
       position: absolute;
       left: 14px;
@@ -732,6 +820,109 @@
       font-weight: 600;
       font-size: .9rem;
     }
+    .promo-modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(58, 53, 34, .48);
+      backdrop-filter: blur(14px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      z-index: 1200;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .25s ease, visibility .25s ease;
+    }
+    .promo-modal.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    .promo-modal-panel {
+      width: min(100%, 520px);
+      border-radius: 30px;
+      background: linear-gradient(155deg, rgba(255,255,255,.96), rgba(249,241,209,.96));
+      border: 1px solid rgba(163,141,79,.18);
+      box-shadow: 0 30px 80px rgba(70, 60, 33, .22);
+      padding: clamp(24px, 4vw, 34px);
+      position: relative;
+      display: grid;
+      gap: 18px;
+      text-align: center;
+    }
+    .promo-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(163,141,79,.18);
+      background: rgba(255,255,255,.84);
+      color: var(--accent-secondary);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .promo-modal-kicker {
+      width: fit-content;
+      margin: 0 auto;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: rgba(175,195,110,.18);
+      color: var(--accent-secondary);
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .promo-modal h3 {
+      margin: 0;
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+    }
+    .promo-modal p {
+      margin: 0;
+      color: var(--text-soft);
+      line-height: 1.7;
+    }
+    .promo-modal-price {
+      display: inline-flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 18px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, rgba(175,195,110,.18), rgba(217,164,65,.18));
+      border: 1px solid rgba(217,164,65,.24);
+    }
+    .promo-modal-price-old {
+      font-size: 1rem;
+      color: var(--text-soft);
+      text-decoration: line-through;
+      text-decoration-color: rgba(108,106,69,.35);
+    }
+    .promo-modal-price-new {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      line-height: 1;
+      font-weight: 800;
+      color: var(--accent-secondary);
+      letter-spacing: -.03em;
+    }
+    .promo-modal-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .promo-modal-actions .cta-btn,
+    .promo-modal-actions .cta-btn-outline {
+      min-width: 200px;
+      justify-content: center;
+    }
 
     footer { background: #6a673f; color: #f6edd0; padding: 42px 0 28px; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 24px; }
@@ -808,6 +999,12 @@
       .pricing-steps-badge { top: 14px; right: 14px; padding: 10px 14px; }
       .pricing-actions { flex-direction: column; }
       .pricing-actions .cta-btn, .pricing-actions .cta-btn-outline, #cta-final .cta-btn { width: 100%; }
+      .hero-offer-prices { grid-template-columns: 1fr; }
+      .hero-offer-actions .cta-btn { width: 100%; }
+      .promo-modal { padding: 16px; }
+      .promo-modal-panel { border-radius: 24px; }
+      .promo-modal-actions { flex-direction: column; }
+      .promo-modal-actions .cta-btn, .promo-modal-actions .cta-btn-outline { width: 100%; min-width: 0; }
       .register-box { border-radius: var(--radius-md); }
       .footer-bottom { flex-direction: column; }
       #hero :is(.hero-title-line, .hero-sub, .trust-badge),
@@ -870,6 +1067,28 @@
         <img src="./FULL (6).jpeg" alt="ACNE-PURE complete tropical acne treatment set" data-i18n-alt="heroImageAlt" />
         <span class="matte-chip" data-i18n="heroImageChip">Clean • Cool • Recover</span>
       </div>
+      <div class="hero-offer-card">
+        <div class="hero-offer-top">
+          <span class="hero-offer-label" data-i18n="heroOfferLabel">Full Set Offer</span>
+          <span class="hero-save-badge"><i class="fa-solid fa-bolt"></i> <span data-i18n="heroOfferSave">Save 23%</span></span>
+        </div>
+        <div class="hero-offer-prices">
+          <div class="hero-price-card">
+            <span class="hero-price-label" data-i18n="heroOfferIndividualLabel">Individual Price</span>
+            <span class="hero-price-value">$104</span>
+          </div>
+          <div class="hero-price-card featured">
+            <span class="hero-price-label" data-i18n="heroOfferComboLabel">Combo Price</span>
+            <span class="hero-price-value">$80</span>
+          </div>
+        </div>
+        <p class="hero-offer-note" data-i18n="heroOfferNote">Choose the complete ACNE-PURE routine for a premium tropical acne-care ritual while saving more on the full system.</p>
+        <div class="hero-offer-actions">
+          <button type="button" class="cta-btn" id="heroOfferCta">
+            <span data-i18n="heroOfferCta">Start Your ACNE-PURE Routine</span> <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
       <div class="badge-row">
         <span class="trust-badge"><i class="fa-regular fa-snowflake"></i> <span data-i18n="heroBadge1">Cooling Active Technology</span></span>
         <span class="trust-badge"><i class="fa-solid fa-droplet"></i> <span data-i18n="heroBadge2">Oil Control Up To 8 Hours</span></span>
@@ -878,6 +1097,27 @@
       </div>
     </div>
   </section>
+
+  <div class="promo-modal" id="promoModal" aria-hidden="true">
+    <div class="promo-modal-panel" role="dialog" aria-modal="true" aria-labelledby="promoModalTitle" aria-describedby="promoModalText">
+      <button type="button" class="promo-modal-close" id="promoModalClose" aria-label="Close popup">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="promo-modal-kicker" data-i18n="promoModalKicker">Premium Full Set</div>
+      <h3 id="promoModalTitle" data-i18n="promoModalTitle">Start your premium ACNE-PURE routine</h3>
+      <p id="promoModalText" data-i18n="promoModalText">Unlock the 5-step tropical skincare system with the complete combo and enjoy a clean, calm, minimal consultation journey.</p>
+      <div class="promo-modal-price">
+        <span class="promo-modal-price-old">$104</span>
+        <span class="promo-modal-price-new">$80</span>
+      </div>
+      <div class="promo-modal-actions">
+        <a href="#register" class="cta-btn" id="promoModalPrimary">
+          <span data-i18n="promoModalPrimary">Continue to Consultation</span> <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <button type="button" class="cta-btn-outline" id="promoModalSecondary" data-i18n="promoModalSecondary">Maybe Later</button>
+      </div>
+    </div>
+  </div>
 
   <section id="product-gallery">
     <div class="container">
@@ -1173,6 +1413,12 @@
         heroBadge4: 'Matte Finish Hydration',
         heroImageAlt: 'ACNE-PURE complete tropical acne treatment set',
         heroImageChip: 'Clean • Cool • Recover',
+        heroOfferLabel: 'Full Set Offer',
+        heroOfferSave: 'Save 23%',
+        heroOfferIndividualLabel: 'Individual Price',
+        heroOfferComboLabel: 'Combo Price',
+        heroOfferNote: 'Choose the complete ACNE-PURE routine for a premium tropical acne-care ritual while saving more on the full system.',
+        heroOfferCta: 'Start Your ACNE-PURE Routine',
         productsLabel: 'ACNE-PURE Product Line',
         productsTitle: 'Complete 5-product system in horizontal slider',
         productsHint: 'Swipe horizontally to explore all products →',
@@ -1228,6 +1474,11 @@
         finalTitle: 'Clearer Skin Starts With The Right System',
         finalText: 'A complete acne-care routine designed for oily skin in hot & humid climates.',
         finalCta: 'Start Your ACNE-PURE Routine',
+        promoModalKicker: 'Premium Full Set',
+        promoModalTitle: 'Start your premium ACNE-PURE routine',
+        promoModalText: 'Unlock the 5-step tropical skincare system with the complete combo and enjoy a clean, calm, minimal consultation journey.',
+        promoModalPrimary: 'Continue to Consultation',
+        promoModalSecondary: 'Maybe Later',
         registerLabel: 'Priority Skin Consultation',
         registerTitle: 'Book your ACNE-PURE full-set support',
         registerText: 'Leave your details for consultation and full-set ordering support.',
@@ -1278,6 +1529,12 @@
         heroBadge4: 'Hydration na Matte Finish',
         heroImageAlt: 'kumpletong ACNE-PURE tropical acne treatment set',
         heroImageChip: 'Linisin • Palamigin • I-recover',
+        heroOfferLabel: 'Alok ng Full Set',
+        heroOfferSave: 'Makatipid ng 23%',
+        heroOfferIndividualLabel: 'Indibidwal na Presyo',
+        heroOfferComboLabel: 'Presyo ng Combo',
+        heroOfferNote: 'Piliin ang kumpletong ACNE-PURE routine para sa premium na tropical acne-care ritual habang mas nakakatipid sa buong sistema.',
+        heroOfferCta: 'Simulan ang Iyong ACNE-PURE Routine',
         productsLabel: 'Linya ng Produkto ng ACNE-PURE',
         productsTitle: 'Kumpletong 5-produkto na sistema sa horizontal slider',
         productsHint: 'Mag-swipe pahalang para makita ang lahat ng produkto →',
@@ -1333,6 +1590,11 @@
         finalTitle: 'Mas Malinaw na Balat ay Nagsisimula sa Tamang Sistema',
         finalText: 'Isang kumpletong acne-care routine na ginawa para sa mamantikang balat sa mainit at mahalumigmig na klima.',
         finalCta: 'Simulan ang Iyong ACNE-PURE Routine',
+        promoModalKicker: 'Premium na Full Set',
+        promoModalTitle: 'Simulan ang premium mong ACNE-PURE routine',
+        promoModalText: 'I-unlock ang 5-hakbang na tropical skincare system gamit ang kumpletong combo at maranasan ang malinis, kalmado, at minimal na consultation journey.',
+        promoModalPrimary: 'Magpatuloy sa Consultation',
+        promoModalSecondary: 'Mamaya Na',
         registerLabel: 'Priority Skin Consultation',
         registerTitle: 'I-book ang iyong ACNE-PURE full-set support',
         registerText: 'Iwan ang iyong detalye para sa consultation at tulong sa pag-order ng full set.',
@@ -1459,8 +1721,55 @@
       success.style.display = 'block';
     }
 
+    var promoModal = document.getElementById('promoModal');
+    var promoModalPanel = promoModal ? promoModal.querySelector('.promo-modal-panel') : null;
+    var promoModalClose = document.getElementById('promoModalClose');
+    var promoModalSecondary = document.getElementById('promoModalSecondary');
+    var heroOfferCta = document.getElementById('heroOfferCta');
+    function closePromoModal() {
+      if (!promoModal) { return; }
+      promoModal.classList.remove('open');
+      promoModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+    function openPromoModal() {
+      if (!promoModal) { return; }
+      promoModal.classList.add('open');
+      promoModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+    if (heroOfferCta) {
+      heroOfferCta.addEventListener('click', openPromoModal);
+    }
+    if (promoModalClose) {
+      promoModalClose.addEventListener('click', closePromoModal);
+    }
+    if (promoModalSecondary) {
+      promoModalSecondary.addEventListener('click', closePromoModal);
+    }
+    if (promoModal) {
+      promoModal.addEventListener('click', function(event) {
+        if (event.target === promoModal) {
+          closePromoModal();
+        }
+      });
+    }
+    if (promoModalPanel) {
+      promoModalPanel.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+    }
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && promoModal && promoModal.classList.contains('open')) {
+        closePromoModal();
+      }
+    });
+
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
       anchor.addEventListener('click', function(e) {
+        if (promoModal && promoModal.classList.contains('open')) {
+          closePromoModal();
+        }
         var target = document.querySelector(this.getAttribute('href'));
         if (target) {
           e.preventDefault();
